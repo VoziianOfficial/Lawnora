@@ -1365,7 +1365,6 @@ main,
     }
 }
 
-
 @media (max-width: 520px) {
 
     .cookie-banner,
@@ -1380,3 +1379,5 @@ main,
         grid-template-columns: 1fr !important;
     }
 }
+
+
