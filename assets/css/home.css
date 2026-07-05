@@ -2008,7 +2008,6 @@
 .home-compare__card {
     position: relative;
     isolation: isolate;
-    min-height: 210px;
     display: grid;
     align-content: end;
     gap: 10px;
@@ -2134,5 +2133,261 @@
     .home-compare__card h3 {
         max-width: 100%;
         padding-right: 56px;
+    }
+}
+
+/* ==============================
+   Section 8 — Light Leaf Cards 3x2
+============================== */
+
+.home-compare-leaf {
+    position: relative;
+    z-index: 4;
+    isolation: isolate;
+    overflow: visible;
+    background: var(--color-beige-4);
+    color: var(--color-text);
+}
+
+.home-compare-leaf__decor {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.home-compare-leaf__decor i,
+.home-compare-leaf__decor svg {
+    position: absolute;
+    color: var(--color-dark-green);
+    opacity: 0.07;
+    stroke-width: 1.05;
+}
+
+/* большие листья, которые выходят за границы секции */
+.home-compare-leaf__decor i:nth-child(1),
+.home-compare-leaf__decor svg:nth-child(1) {
+    width: clamp(220px, 26vw, 480px);
+    height: clamp(220px, 26vw, 480px);
+    left: -7%;
+    top: 8%;
+    transform: rotate(-24deg);
+}
+
+.home-compare-leaf__decor i:nth-child(2),
+.home-compare-leaf__decor svg:nth-child(2) {
+    width: clamp(190px, 22vw, 390px);
+    height: clamp(190px, 22vw, 390px);
+    right: 8%;
+    top: 6%;
+    opacity: 0.055;
+    transform: rotate(16deg);
+}
+
+.home-compare-leaf__decor i:nth-child(3),
+.home-compare-leaf__decor svg:nth-child(3) {
+    width: clamp(260px, 31vw, 560px);
+    height: clamp(260px, 31vw, 560px);
+    right: -10%;
+    bottom: -190px;
+    transform: rotate(34deg);
+}
+
+.home-compare-leaf__decor i:nth-child(4),
+.home-compare-leaf__decor svg:nth-child(4) {
+    width: clamp(170px, 19vw, 340px);
+    height: clamp(170px, 19vw, 340px);
+    left: 18%;
+    bottom: -130px;
+    opacity: 0.045;
+    transform: rotate(-12deg);
+}
+
+.home-compare-leaf__head {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    max-width: 940px;
+    margin: 0 auto clamp(34px, 5vw, 62px);
+    text-align: center;
+}
+
+.home-compare-leaf__head .section-kicker {
+    margin-bottom: 0;
+}
+
+.home-compare-leaf__head .section-title {
+    max-width: 920px;
+    color: var(--color-dark-brown);
+}
+
+.home-compare-leaf__head .lead {
+    max-width: 720px;
+    margin-inline: auto;
+    color: var(--color-muted);
+}
+
+.home-compare-leaf__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.home-compare-leaf__card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-content: end;
+    gap: 10px;
+    min-height: 210px;
+    padding: clamp(22px, 3vw, 30px);
+    overflow: hidden;
+    border: 1px solid rgba(47, 74, 62, 0.15);
+    border-radius: 30px;
+    background: rgba(247, 244, 239, 0.92);
+    color: var(--color-dark-brown);
+    box-shadow: 0 18px 48px rgba(47, 36, 29, 0.08);
+    transition:
+        transform var(--transition-slow),
+        border-color var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+.home-compare-leaf__card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    z-index: -1;
+    border: 1px solid rgba(47, 74, 62, 0.08);
+    border-radius: 22px;
+    pointer-events: none;
+}
+
+.home-compare-leaf__card::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 0;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--color-lime);
+    transform: scaleX(0.18);
+    transform-origin: left;
+    transition: transform var(--transition-slow);
+}
+
+.home-compare-leaf__card>i,
+.home-compare-leaf__card>svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: clamp(38px, 4vw, 58px);
+    height: clamp(38px, 4vw, 58px);
+    color: var(--color-dark-green);
+    stroke-width: 1.45;
+    opacity: 0.9;
+    transition:
+        transform var(--transition-slow),
+        color var(--transition),
+        opacity var(--transition);
+}
+
+.home-compare-leaf__card span {
+    width: fit-content;
+    padding: 8px 11px;
+    border-radius: var(--radius-pill);
+    background: rgba(155, 203, 67, 0.18);
+    color: var(--color-dark-green);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.home-compare-leaf__card h3 {
+    max-width: calc(100% - 70px);
+    color: var(--color-dark-brown);
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2.2vw, 2.45rem);
+    font-weight: 900;
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+}
+
+.home-compare-leaf__card p {
+    max-width: 430px;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.58;
+}
+
+.home-compare-leaf__card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(47, 74, 62, 0.36);
+    background: var(--color-soft-white);
+    box-shadow: 0 28px 76px rgba(47, 36, 29, 0.14);
+}
+
+.home-compare-leaf__card:hover::after {
+    transform: scaleX(1);
+}
+
+.home-compare-leaf__card:hover>i,
+.home-compare-leaf__card:hover>svg {
+    color: var(--color-lime);
+    opacity: 1;
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* чтобы листья могли визуально заходить на следующую светлую секцию */
+.home-compare-leaf+.section-lighter,
+.home-compare-leaf+.home-intro {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 980px) {
+    .home-compare-leaf__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-compare-leaf__card {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-compare-leaf__head {
+        text-align: left;
+        justify-items: start;
+    }
+
+    .home-compare-leaf__head .lead {
+        margin-inline: 0;
+    }
+
+    .home-compare-leaf__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-compare-leaf__card {
+        min-height: 190px;
+        border-radius: 26px;
+    }
+
+    .home-compare-leaf__card h3 {
+        max-width: 100%;
+        padding-right: 56px;
+    }
+
+    .home-compare-leaf__decor i:nth-child(3),
+    .home-compare-leaf__decor svg:nth-child(3) {
+        bottom: -110px;
     }
 }
