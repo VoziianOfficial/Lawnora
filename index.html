@@ -389,57 +389,100 @@
         </section>
 
         <!-- Section 4 -->
-        <section class="section section-dark home-board" aria-labelledby="home-board-title">
-            <div class="container-wide home-board__layout">
-                <div class="home-board__intro" data-aos="fade-right">
-                    <p class="section-kicker section-kicker--light">Lawn request board</p>
-                    <h2 class="section-title" id="home-board-title">
-                        Turn Scattered Lawn Notes Into A Better Provider Conversation.
+        <section class="section home-request-ledger" aria-labelledby="home-request-ledger-title">
+            <div class="container-wide">
+                <div class="home-request-ledger__head" data-aos="fade-up">
+                    <p class="section-kicker">Lawn request board</p>
+        
+                    <h2 class="section-title" id="home-request-ledger-title">
+                        Turn Lawn Notes Into A Clearer Provider Request.
                     </h2>
-                    <p class="lead lead--light">
-                        Small details can change how providers understand the request. Lawnora helps you think through
-                        the scope before comparing available options.
+        
+                    <p class="lead">
+                        Before comparing provider options, organize the details that usually matter most: timing, service type,
+                        property access, cleanup expectations, and visible lawn concerns.
                     </p>
-                    <a class="btn btn-lime" href="contact.html#request-form">
-                        <span>Start Your Request</span>
-                        <i data-lucide="send" aria-hidden="true"></i>
-                    </a>
+        
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="contact.html#request-form">
+                            <span>Start Your Request</span>
+                            <i data-lucide="send" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-ghost" href="all-services.html">
+                            <span>View Categories</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="home-board__cards">
-                    <article class="home-board__card card-shine" tabindex="0" data-reveal-card data-aos="fade-left">
-                        <i data-lucide="leaf" aria-hidden="true"></i>
-                        <h3>Weekly mowing and trimming</h3>
-                        <p>Useful for recurring lawn height control and regular upkeep conversations.</p>
-                        <span>Compare: frequency, trimming, cleanup, access.</span>
+        
+                <div class="home-request-ledger__grid">
+                    <article class="home-request-ledger__item" tabindex="0" data-aos="fade-up">
+                        <span class="home-request-ledger__number">01</span>
+                        <div class="home-request-ledger__text">
+                            <span>Recurring care</span>
+                            <h3>Weekly mowing and trimming</h3>
+                            <p>Useful for regular grass height control, trimming around edges, and recurring upkeep
+                                conversations.</p>
+                        </div>
+                        <div class="home-request-ledger__icon">
+                            <i data-lucide="leaf" aria-hidden="true"></i>
+                        </div>
                     </article>
-                    <article class="home-board__card card-shine" tabindex="0" data-reveal-card data-aos="fade-right">
-                        <i data-lucide="sprout" aria-hidden="true"></i>
-                        <h3>Weed control and fertilization</h3>
-                        <p>Useful when the lawn needs treatment details reviewed with participating providers.</p>
-                        <span>Compare: products, timing, safety notes, follow-up.</span>
+        
+                    <article class="home-request-ledger__item" tabindex="0" data-aos="fade-up" data-aos-delay="80">
+                        <span class="home-request-ledger__number">02</span>
+                        <div class="home-request-ledger__text">
+                            <span>Treatment details</span>
+                            <h3>Weed control and fertilization</h3>
+                            <p>Useful when you want providers to review lawn condition, product approach, timing, and safety
+                                notes.</p>
+                        </div>
+                        <div class="home-request-ledger__icon">
+                            <i data-lucide="sprout" aria-hidden="true"></i>
+                        </div>
                     </article>
-                    <article class="home-board__card card-shine" tabindex="0" data-reveal-card data-aos="fade-left">
-                        <i data-lucide="badge-check" aria-hidden="true"></i>
-                        <h3>Bare patch repair</h3>
-                        <p>Useful for damaged grass, patchy areas, or lawn recovery requests.</p>
-                        <span>Compare: prep, materials, watering, schedule.</span>
+        
+                    <article class="home-request-ledger__item" tabindex="0" data-aos="fade-up" data-aos-delay="160">
+                        <span class="home-request-ledger__number">03</span>
+                        <div class="home-request-ledger__text">
+                            <span>Lawn recovery</span>
+                            <h3>Bare patch repair</h3>
+                            <p>Useful for patchy areas, damaged grass, new lawn sections, or visible repair needs.</p>
+                        </div>
+                        <div class="home-request-ledger__icon">
+                            <i data-lucide="badge-check" aria-hidden="true"></i>
+                        </div>
                     </article>
-                    <article class="home-board__card card-shine" tabindex="0" data-reveal-card data-aos="fade-right">
-                        <i data-lucide="tree-pine" aria-hidden="true"></i>
-                        <h3>Seasonal leaf and debris cleanup</h3>
-                        <p>Useful for spring or fall cleanup, leaf removal, and outdoor preparation.</p>
-                        <span>Compare: debris handling, hauling, yard access.</span>
+        
+                    <article class="home-request-ledger__item" tabindex="0" data-aos="fade-up" data-aos-delay="240">
+                        <span class="home-request-ledger__number">04</span>
+                        <div class="home-request-ledger__text">
+                            <span>Seasonal reset</span>
+                            <h3>Leaf and debris cleanup</h3>
+                            <p>Useful for spring cleanup, fall leaf removal, debris handling, and yard preparation.</p>
+                        </div>
+                        <div class="home-request-ledger__icon">
+                            <i data-lucide="tree-pine" aria-hidden="true"></i>
+                        </div>
                     </article>
-                    <article class="home-board__card card-shine" tabindex="0" data-reveal-card data-aos="fade-left">
-                        <i data-lucide="scissors" aria-hidden="true"></i>
-                        <h3>Edge and hedge detailing</h3>
-                        <p>Useful for borders, shrubs, hedges, and cleaner outdoor detail work.</p>
-                        <span>Compare: shaping scope, cleanup, recurring options.</span>
+        
+                    <article class="home-request-ledger__item home-request-ledger__item--accent" tabindex="0" data-aos="fade-up"
+                        data-aos-delay="320">
+                        <span class="home-request-ledger__number">05</span>
+                        <div class="home-request-ledger__text">
+                            <span>Detail finish</span>
+                            <h3>Edge and hedge detailing</h3>
+                            <p>Useful for borders, shrubs, hedges, sharper edges, and a cleaner finished outdoor look.</p>
+                        </div>
+                        <div class="home-request-ledger__icon">
+                            <i data-lucide="scissors" aria-hidden="true"></i>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
+
+
 
         <!-- Section 5 -->
         <section class="section section-green home-popular" aria-labelledby="home-popular-title">
