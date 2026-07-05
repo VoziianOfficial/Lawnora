@@ -837,39 +837,114 @@
         </div>
     </section>
 
-        <!-- Section 8 -->
-        <section class="section section-green services-note" aria-labelledby="services-note-title">
-            <div class="container-wide services-note__layout">
-                <div class="services-note__content" data-aos="fade-right">
-                    <p class="section-kicker section-kicker--light">Lawnora matching note</p>
-                    <h2 class="section-title" id="services-note-title">
-                        A Clearer Request Can Make Provider Conversations Easier.
-                    </h2>
-                    <p class="lead lead--light">
-                        Lawnora helps structure your request so provider conversations can be clearer. Availability,
-                        service scope, pricing, warranties, and terms vary by location and provider.
-                    </p>
-                    <div class="btn-row">
-                        <a class="btn btn-lime" href="contact.html#request-form">
-                            <span>Submit Project Details</span>
-                            <i data-lucide="send" aria-hidden="true"></i>
-                        </a>
-                        <a class="btn btn-ghost-light" href="about.html">
-                            <span>About Lawnora</span>
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+<!-- Section 8 -->
+<section class="section section-green services-note services-note-showcase" aria-labelledby="services-note-title"
+    data-note-slider>
+    <div class="services-note-showcase__media" aria-hidden="true">
+        <img class="services-note-showcase__image is-active" src="assets/images/card-1.jpg" alt="" data-note-bg>
+        <img class="services-note-showcase__image" src="assets/images/card-2.jpg" alt="" data-note-bg>
+        <img class="services-note-showcase__image" src="assets/images/card-3.jpg" alt="" data-note-bg>
+        <img class="services-note-showcase__image" src="assets/images/card-4.jpg" alt="" data-note-bg>
+    </div>
 
-                <div class="services-note__visual" data-aos="fade-left">
-                    <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" data-logo-src>
-                    <div>
-                        <span data-config="brand.name">Lawnora</span>
-                        <p>Independent provider-matching platform</p>
-                    </div>
+    <div class="services-note-showcase__overlay" aria-hidden="true"></div>
+
+    <div class="container-wide services-note-showcase__inner">
+        <div class="services-note-showcase__slides">
+            <article class="services-note-showcase__slide is-active" data-note-slide>
+                <p class="section-kicker section-kicker--light">Lawnora matching note</p>
+                <h2 class="section-title" id="services-note-title">
+                    A Clearer Request Can Make Provider Conversations Easier.
+                </h2>
+                <p class="lead lead--light">
+                    Lawnora helps structure your lawn care request before you compare participating provider options.
+                    Scope, timing, pricing, warranties, and terms still vary by provider and location.
+                </p>
+
+                <div class="services-note-showcase__chips">
+                    <span>Request clarity</span>
+                    <span>Provider comparison</span>
+                    <span>Local availability</span>
                 </div>
+            </article>
+
+            <article class="services-note-showcase__slide" data-note-slide>
+                <p class="section-kicker section-kicker--light">Before you continue</p>
+                <h2 class="section-title">
+                    Organize The Details Providers Usually Need First.
+                </h2>
+                <p class="lead lead--light">
+                    A useful request usually includes the lawn area, service type, access notes, timing goals,
+                    recurring needs, cleanup expectations, and any visible lawn concerns.
+                </p>
+
+                <div class="services-note-showcase__chips">
+                    <span>Lawn area</span>
+                    <span>Service type</span>
+                    <span>Access details</span>
+                </div>
+            </article>
+
+            <article class="services-note-showcase__slide" data-note-slide>
+                <p class="section-kicker section-kicker--light">Better provider questions</p>
+                <h2 class="section-title">
+                    Confirm Scope, Timing, Products, And Terms Directly.
+                </h2>
+                <p class="lead lead--light">
+                    Lawnora does not set provider pricing or final service terms. Homeowners should confirm included
+                    tasks, product details, scheduling, cleanup, aftercare, and cancellation rules.
+                </p>
+
+                <div class="services-note-showcase__chips">
+                    <span>Included tasks</span>
+                    <span>Product notes</span>
+                    <span>Final terms</span>
+                </div>
+            </article>
+
+            <article class="services-note-showcase__slide" data-note-slide>
+                <p class="section-kicker section-kicker--light">Ready to request</p>
+                <h2 class="section-title">
+                    Submit The Details And Keep The Conversation Focused.
+                </h2>
+                <p class="lead lead--light">
+                    Use the request form to share what you need, where the lawn is located, what timing works best,
+                    and which service category feels closest to the project.
+                </p>
+
+                <div class="services-note-showcase__chips">
+                    <span>Project details</span>
+                    <span>Preferred timing</span>
+                    <span>Service category</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="services-note-showcase__bottom">
+            <div class="btn-row">
+                <a class="btn btn-lime" href="contact.html#request-form">
+                    <span>Submit Project Details</span>
+                    <i data-lucide="send" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-ghost-light" href="about.html">
+                    <span>About Lawnora</span>
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
             </div>
-        </section>
+
+            <div class="services-note-showcase__controls" aria-label="Matching note slideshow controls">
+                <button class="services-note-showcase__dot is-active" type="button" data-note-dot="0"
+                    aria-label="Show slide 1"></button>
+                <button class="services-note-showcase__dot" type="button" data-note-dot="1"
+                    aria-label="Show slide 2"></button>
+                <button class="services-note-showcase__dot" type="button" data-note-dot="2"
+                    aria-label="Show slide 3"></button>
+                <button class="services-note-showcase__dot" type="button" data-note-dot="3"
+                    aria-label="Show slide 4"></button>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Section 9 -->
         <section class="section section-light services-faq" aria-labelledby="services-faq-title">

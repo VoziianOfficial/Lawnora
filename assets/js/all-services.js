@@ -233,6 +233,72 @@
         });
     }
 
+    function initServicesNoteSlider() {
+        const sliders = document.querySelectorAll("[data-note-slider]");
+        if (!sliders.length) return;
+
+        sliders.forEach((slider) => {
+            if (slider.dataset.noteSliderReady === "true") return;
+            slider.dataset.noteSliderReady = "true";
+
+            const slides = Array.from(slider.querySelectorAll("[data-note-slide]"));
+            const images = Array.from(slider.querySelectorAll("[data-note-bg]"));
+            const dots = Array.from(slider.querySelectorAll("[data-note-dot]"));
+
+            if (!slides.length || !images.length) return;
+
+            let activeIndex = 0;
+            let timer = null;
+            const delay = 5200;
+
+            function setActive(index) {
+                activeIndex = (index + slides.length) % slides.length;
+
+                slides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle("is-active", slideIndex === activeIndex);
+                });
+
+                images.forEach((image, imageIndex) => {
+                    image.classList.toggle("is-active", imageIndex === activeIndex);
+                });
+
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle("is-active", dotIndex === activeIndex);
+                });
+            }
+
+            function startAuto() {
+                stopAuto();
+
+                timer = window.setInterval(() => {
+                    setActive(activeIndex + 1);
+                }, delay);
+            }
+
+            function stopAuto() {
+                if (!timer) return;
+                window.clearInterval(timer);
+                timer = null;
+            }
+
+            dots.forEach((dot) => {
+                dot.addEventListener("click", () => {
+                    const index = Number(dot.getAttribute("data-note-dot"));
+                    if (Number.isNaN(index)) return;
+
+                    setActive(index);
+                    startAuto();
+                });
+            });
+
+            slider.addEventListener("mouseenter", stopAuto);
+            slider.addEventListener("mouseleave", startAuto);
+
+            setActive(0);
+            startAuto();
+        });
+    }
+
 
     function initAllServices() {
         initServicesHeroParallax();
@@ -242,6 +308,7 @@
         initNavigatorDrag();
         initCardMouseGlow();
         initQuestionSlider();
+        initServicesNoteSlider();
         refreshIcons();
     }
 
