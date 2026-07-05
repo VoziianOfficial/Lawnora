@@ -125,14 +125,40 @@
         const swiperEl = document.querySelector("[data-process-swiper]");
         if (!swiperEl || !window.Swiper) return;
 
+        const wrapper = swiperEl.querySelector(".swiper-wrapper");
+        if (!wrapper) return;
+
         const progress = document.querySelector("[data-process-progress]");
         const utils = getUtils();
 
+        /* 
+           IMPORTANT:
+           Swiper loop needs more slides than visible slides.
+           We have only 4 real slides, so we duplicate them BEFORE Swiper starts.
+        */
+        if (!swiperEl.hasAttribute("data-loop-prepared")) {
+            const originalSlides = Array.from(wrapper.children);
+
+            while (wrapper.children.length < 12) {
+                originalSlides.forEach((slide) => {
+                    const clone = slide.cloneNode(true);
+                    clone.setAttribute("aria-hidden", "true");
+                    clone.classList.add("home-process__slide--clone");
+                    wrapper.appendChild(clone);
+                });
+            }
+
+            swiperEl.setAttribute("data-loop-prepared", "true");
+        }
+
         const swiper = new Swiper(swiperEl, {
             slidesPerView: 1,
+            slidesPerGroup: 1,
             spaceBetween: 18,
             speed: 720,
-            loop: false,
+            loop: true,
+            loopAdditionalSlides: 1,
+            watchOverflow: false,
             grabCursor: true,
             watchSlidesProgress: true,
             navigation: {
@@ -141,15 +167,18 @@
             },
             breakpoints: {
                 760: {
-                    slidesPerView: 1.25,
+                    slidesPerView: 1.15,
+                    slidesPerGroup: 1,
                     spaceBetween: 18
                 },
                 980: {
-                    slidesPerView: 1.45,
+                    slidesPerView: 1.3,
+                    slidesPerGroup: 1,
                     spaceBetween: 20
                 },
                 1180: {
-                    slidesPerView: 1.65,
+                    slidesPerView: 1.45,
+                    slidesPerGroup: 1,
                     spaceBetween: 22
                 }
             },
