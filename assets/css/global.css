@@ -2057,3 +2057,36 @@ h4 {
         transition-duration: 0.001ms !important;
     }
 }
+
+/* FIX: force sticky/fixed header on all pages */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    background: var(--color-dark-brown);
+    color: var(--color-soft-white);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+/* чтобы контент не прятался под fixed header */
+body {
+    padding-top: var(--header-height);
+}
+
+/* если hero должен заходить под хедер красиво */
+.home-hero,
+.about-hero,
+.services-hero,
+.service-hero,
+.contact-hero,
+.legal-hero {
+    margin-top: calc(-1 * var(--header-height));
+    padding-top: var(--header-height);
+}
