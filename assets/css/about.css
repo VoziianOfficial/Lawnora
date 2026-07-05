@@ -554,6 +554,24 @@
 }
 
 @media (max-width: 560px) {
+    .about-hero .hero-title {
+        font-size: clamp(2.25rem, 12.8vw, 3.55rem);
+        line-height: 0.94;
+        max-width: 8ch;
+        overflow-wrap: anywhere;
+    }
+
+    .about-hero .marked-word {
+        display: inline;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .about-hero .marked-word::after {
+        display: none;
+    }
+
     .about-hero__note {
         grid-template-columns: 1fr;
     }
