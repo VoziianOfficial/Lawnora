@@ -241,6 +241,199 @@
         });
     }
 
+    function initPopularShowcase() {
+        const root = document.querySelector("[data-home-popular-showcase]");
+        if (!root) return;
+
+        const utils = getUtils();
+        const services =
+            window.LAWNORA_CONFIG && Array.isArray(window.LAWNORA_CONFIG.services)
+                ? window.LAWNORA_CONFIG.services
+                : [];
+
+        if (!services.length) return;
+
+        const backgrounds = Array.from(root.querySelectorAll("[data-showcase-bg]"));
+        const title = root.querySelector("[data-showcase-title]");
+        const text = root.querySelector("[data-showcase-text]");
+        const detail = root.querySelector("[data-showcase-detail]");
+        const link = root.querySelector("[data-showcase-link]");
+        const icon = root.querySelector("[data-showcase-icon]");
+        const count = root.querySelector("[data-showcase-count]");
+        const smallItems = root.querySelectorAll("[data-showcase-small]");
+        const nextButton = root.querySelector("[data-showcase-next]");
+        const prevButton = root.querySelector("[data-showcase-prev]");
+
+        let activeIndex = 0;
+        let timer = null;
+        let isAnimating = false;
+        let touchStartX = 0;
+
+        backgrounds.forEach((background) => {
+            const serviceId = background.getAttribute("data-showcase-bg");
+            const service =
+                typeof utils.getServiceById === "function"
+                    ? utils.getServiceById(serviceId)
+                    : services.find((item) => item.id === serviceId);
+
+            if (!service || !service.image) return;
+
+            background.style.backgroundImage = `url("${service.image}")`;
+        });
+
+        function getService(index) {
+            return services[index] || services[0];
+        }
+
+        function updateContent(service, index) {
+            backgrounds.forEach((background) => {
+                const isActive = background.getAttribute("data-showcase-bg") === service.id;
+                background.classList.toggle("is-active", isActive);
+            });
+
+            if (title) {
+                title.textContent = service.title || "Lawn Care Category";
+            }
+
+            if (text) {
+                text.textContent =
+                    service.description ||
+                    "Review this lawn care category before submitting your request.";
+            }
+
+            if (detail) {
+                detail.textContent =
+                    service.usefulWhen ||
+                    service.compareFor ||
+                    "Use this category to organize details before comparing available provider options.";
+            }
+
+            if (link) {
+                link.href = service.url || "all-services.html";
+            }
+
+            if (icon) {
+                icon.setAttribute("data-lucide", service.icon || "leaf");
+            }
+
+            if (count) {
+                count.textContent = `${String(index + 1).padStart(2, "0")} / ${String(services.length).padStart(2, "0")}`;
+            }
+
+            smallItems.forEach((item) => {
+                item.textContent = service.shortTitle || "Lawn care category";
+            });
+
+            refreshIcons();
+        }
+
+        function goTo(index, direction = "next") {
+            if (isAnimating) return;
+
+            const nextIndex = (index + services.length) % services.length;
+            const service = getService(nextIndex);
+
+            isAnimating = true;
+            activeIndex = nextIndex;
+
+            root.classList.remove("is-turning-next", "is-turning-prev");
+            root.classList.add("is-changing", direction === "prev" ? "is-turning-prev" : "is-turning-next");
+
+            window.setTimeout(() => {
+                updateContent(service, activeIndex);
+            }, 260);
+
+            window.setTimeout(() => {
+                root.classList.remove("is-changing", "is-turning-next", "is-turning-prev");
+                isAnimating = false;
+            }, 760);
+        }
+
+        function nextSlide() {
+            goTo(activeIndex + 1, "next");
+        }
+
+        function prevSlide() {
+            goTo(activeIndex - 1, "prev");
+        }
+
+        function restartTimer() {
+            if (timer) {
+                window.clearInterval(timer);
+            }
+
+            timer = window.setInterval(nextSlide, 3800);
+        }
+
+        updateContent(getService(activeIndex), activeIndex);
+        restartTimer();
+
+        if (nextButton) {
+            nextButton.addEventListener("click", () => {
+                nextSlide();
+                restartTimer();
+            });
+        }
+
+        if (prevButton) {
+            prevButton.addEventListener("click", () => {
+                prevSlide();
+                restartTimer();
+            });
+        }
+
+        root.addEventListener(
+            "touchstart",
+            (event) => {
+                touchStartX = event.touches[0].clientX;
+            },
+            { passive: true }
+        );
+
+        root.addEventListener(
+            "touchend",
+            (event) => {
+                const touchEndX = event.changedTouches[0].clientX;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) < 40) return;
+
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+
+                restartTimer();
+            },
+            { passive: true }
+        );
+
+        root.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") {
+                nextSlide();
+                restartTimer();
+            }
+
+            if (event.key === "ArrowLeft") {
+                prevSlide();
+                restartTimer();
+            }
+        });
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden && timer) {
+                window.clearInterval(timer);
+                timer = null;
+                return;
+            }
+
+            if (!document.hidden && !timer) {
+                restartTimer();
+            }
+        });
+    }
+    
     function initHome() {
         initHomeServiceSelector();
         initFitImageSwitcher();
@@ -249,6 +442,7 @@
         initHeroParallaxSoftness();
         initCardKeyboardOpen();
         refreshIcons();
+        initPopularShowcase();
     }
 
     ready(initHome);
