@@ -298,70 +298,6 @@
     color: var(--color-lime);
 }
 
-/* ==============================
-   Section 5 — Values
-============================== */
-
-.about-values__heading {
-    display: grid;
-    gap: 18px;
-    max-width: 980px;
-    margin-bottom: clamp(34px, 5vw, 62px);
-}
-
-.about-values__grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.about-values__card {
-    display: grid;
-    align-content: start;
-    min-height: 320px;
-    padding: clamp(22px, 3vw, 30px);
-    border: 1px solid rgba(47, 36, 29, 0.13);
-    border-radius: 30px;
-    background: rgba(247, 244, 239, 0.58);
-    box-shadow: var(--shadow-soft);
-    transition:
-        transform var(--transition),
-        background var(--transition),
-        border-color var(--transition);
-}
-
-.about-values__card:hover {
-    transform: translateY(-7px);
-    border-color: rgba(47, 74, 62, 0.32);
-    background: var(--color-soft-white);
-}
-
-.about-values__card i,
-.about-values__card svg {
-    width: clamp(38px, 4vw, 58px);
-    height: clamp(38px, 4vw, 58px);
-    margin-bottom: auto;
-    color: var(--color-dark-green);
-    stroke-width: 1.45;
-    transition: color var(--transition), transform var(--transition);
-}
-
-.about-values__card:hover i,
-.about-values__card:hover svg {
-    color: var(--color-lime);
-    transform: rotate(-8deg);
-}
-
-.about-values__card h3 {
-    margin-top: clamp(44px, 6vw, 78px);
-    margin-bottom: 12px;
-    color: var(--color-dark-brown);
-}
-
-.about-values__card p {
-    color: var(--color-muted);
-    line-height: 1.68;
-}
 
 /* ==============================
    Section 6 — Scenarios Tabs
@@ -831,4 +767,158 @@
 
 .about-model__panel p {
     margin-bottom: 0;
+}
+
+/* ==============================
+   Section 5 — Values Round Photo Cards
+============================== */
+
+.about-values__heading {
+    display: grid;
+    gap: 18px;
+    max-width: 980px;
+    margin-bottom: clamp(34px, 5vw, 62px);
+}
+
+.about-values__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 24px);
+    align-items: stretch;
+}
+
+.about-values__card {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(47, 36, 29, 0.14);
+    border-radius: 50%;
+    background: var(--color-dark-brown);
+    box-shadow: 0 24px 70px rgba(47, 36, 29, 0.14);
+    cursor: pointer;
+    transition:
+        transform var(--transition-slow),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.about-values__card img {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.03);
+    transition:
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter var(--transition);
+}
+
+.about-values__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: rgba(0, 0, 0, 0.24);
+    transition: background var(--transition);
+}
+
+.about-values__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: clamp(22px, 3vw, 34px);
+    text-align: center;
+    color: var(--color-soft-white);
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.about-values__content i,
+.about-values__content svg {
+    width: clamp(34px, 4vw, 58px);
+    height: clamp(34px, 4vw, 58px);
+    color: var(--color-lime);
+    stroke-width: 1.45;
+    transition: transform var(--transition);
+}
+
+.about-values__content h3 {
+    color: var(--color-soft-white);
+    font-size: clamp(1.45rem, 2.2vw, 2.5rem);
+    line-height: 0.95;
+    text-shadow: 0 14px 34px rgba(0, 0, 0, 0.36);
+}
+
+.about-values__content p {
+    max-width: 260px;
+    color: rgba(247, 244, 239, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+}
+
+.about-values__card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgba(155, 203, 67, 0.55);
+    box-shadow: 0 34px 90px rgba(47, 36, 29, 0.22);
+}
+
+.about-values__card:hover img {
+    transform: scale(1.13);
+    filter: saturate(1.12) contrast(1.05);
+}
+
+.about-values__card:hover .about-values__overlay {
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.about-values__card:hover .about-values__content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.about-values__card:hover .about-values__content i,
+.about-values__card:hover .about-values__content svg {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+@media (max-width: 1100px) {
+    .about-values__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-values__grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+
+    .about-values__heading {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .about-values__content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .about-values__overlay {
+        background: rgba(0, 0, 0, 0.54);
+    }
 }
