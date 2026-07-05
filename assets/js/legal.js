@@ -133,7 +133,7 @@
                 try {
                     localStorage.setItem("lawnoraCookieConsent", "accepted");
                 } catch (error) {
-                    /* silent */
+                    
                 }
 
                 setStatus("Cookie preference saved: accepted.");
@@ -145,7 +145,7 @@
                 try {
                     localStorage.setItem("lawnoraCookieConsent", "declined");
                 } catch (error) {
-                    /* silent */
+                    
                 }
 
                 setStatus("Cookie preference saved: declined.");
@@ -157,7 +157,7 @@
                 try {
                     localStorage.removeItem("lawnoraCookieConsent");
                 } catch (error) {
-                    /* silent */
+                    
                 }
 
                 setStatus("Cookie preference reset. The cookie notice can appear again.");

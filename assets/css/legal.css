@@ -1,13 +1,6 @@
-/* ==============================
-   LEGAL PAGES
-   Shared for privacy-policy.html,
-   terms-of-service.html,
-   cookie-policy.html
-============================== */
 
-/* ==============================
-   Legal Hero
-============================== */
+
+
 
 .legal-hero {
     position: relative;
@@ -88,9 +81,7 @@
     color: var(--color-lime);
 }
 
-/* ==============================
-   Legal Layout
-============================== */
+
 
 .legal-content {
     background: var(--color-beige-2);
@@ -376,9 +367,7 @@
     color: var(--color-dark-green);
 }
 
-/* ==============================
-   Legal Contact Strip
-============================== */
+
 
 .legal-contact-strip {
     padding-top: var(--section-y-small);
@@ -445,9 +434,7 @@
     word-break: break-word;
 }
 
-/* ==============================
-   Cookie Preference Demo Box
-============================== */
+
 
 .cookie-preference-box {
     display: grid;
@@ -487,9 +474,7 @@
     gap: 10px;
 }
 
-/* ==============================
-   Print
-============================== */
+
 
 @media print {
 
@@ -544,9 +529,7 @@
     }
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
     .legal-layout {

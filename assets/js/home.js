@@ -131,11 +131,7 @@
         const progress = document.querySelector("[data-process-progress]");
         const utils = getUtils();
 
-        /* 
-           IMPORTANT:
-           Swiper loop needs more slides than visible slides.
-           We have only 4 real slides, so we duplicate them BEFORE Swiper starts.
-        */
+        
         if (!swiperEl.hasAttribute("data-loop-prepared")) {
             const originalSlides = Array.from(wrapper.children);
 

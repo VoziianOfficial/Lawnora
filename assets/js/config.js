@@ -1,10 +1,6 @@
 "use strict";
 
-/**
- * Lawnora global configuration.
- * Edit this file to update brand, contact, legal, footer, services,
- * and form settings across the entire website.
- */
+
 
 window.LAWNORA_CONFIG = {
     brand: {

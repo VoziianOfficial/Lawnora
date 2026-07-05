@@ -1,11 +1,6 @@
-/* ==============================
-   CONTACT PAGE
-   Sections count: 7
-============================== */
 
-/* ==============================
-   Section 1 — Contact Hero
-============================== */
+
+
 
 .contact-hero {
     position: relative;
@@ -82,9 +77,7 @@
     flex: 0 0 auto;
 }
 
-/* ==============================
-   Section 2 — Intent Strip
-============================== */
+
 
 .contact-intent__grid {
     display: grid;
@@ -168,9 +161,7 @@
     transform: translateX(4px);
 }
 
-/* ==============================
-   Section 3 — Request Form
-============================== */
+
 
 .contact-request {
     scroll-margin-top: calc(var(--header-height) + 30px);
@@ -312,9 +303,7 @@
     width: 100%;
 }
 
-/* ==============================
-   Section 4 — After Submission
-============================== */
+
 
 .contact-after__timeline {
     display: grid;
@@ -386,9 +375,7 @@
     line-height: 1.65;
 }
 
-/* ==============================
-   Section 5 — Contact FAQ
-============================== */
+
 
 .contact-faq__layout {
     display: grid;
@@ -404,9 +391,7 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 6 — Direct Contact Cards
-============================== */
+
 
 .contact-direct__grid {
     display: grid;
@@ -476,17 +461,13 @@
     text-underline-offset: 5px;
 }
 
-/* ==============================
-   Section 7 — Prefooter CTA
-============================== */
+
 
 .prefooter-cta {
     padding-top: var(--section-y-small);
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
     .contact-faq__layout {
@@ -574,7 +555,7 @@
     }
 }
 
-/* FIX — Contact intent cards icons on the right */
+
 
 .contact-intent__card {
     position: relative;
@@ -585,7 +566,7 @@
     overflow: hidden;
 }
 
-/* большая главная иконка справа */
+
 .contact-intent__card>i,
 .contact-intent__card>svg {
     position: absolute;
@@ -603,14 +584,14 @@
         opacity var(--transition);
 }
 
-/* текст НЕ ужимаем */
+
 .contact-intent__card h3,
 .contact-intent__card p {
     max-width: none;
     padding-right: 0;
 }
 
-/* чтобы заголовок не залезал прямо под иконку только на коротких карточках */
+
 .contact-intent__card h3 {
     min-height: 1.8em;
 }
@@ -619,7 +600,7 @@
     width: 100%;
 }
 
-/* нижняя ссылка остается обычной */
+
 .contact-intent__card span {
     display: inline-flex;
     align-items: center;
@@ -627,7 +608,7 @@
     width: fit-content;
 }
 
-/* маленькая стрелка внутри span не становится большой */
+
 .contact-intent__card span i,
 .contact-intent__card span svg {
     position: static;
@@ -637,7 +618,7 @@
     pointer-events: auto;
 }
 
-/* hover */
+
 .contact-intent__card:hover>i,
 .contact-intent__card:hover>svg {
     color: var(--color-lime);
@@ -660,9 +641,7 @@
     }
 }
 
-/* ==============================
-   Contact After — 2 in row / icons right / low wide cards
-============================== */
+
 
 .contact-after__timeline {
     display: grid;
@@ -691,7 +670,7 @@
         background var(--transition);
 }
 
-/* главная иконка справа */
+
 .contact-after__item>i,
 .contact-after__item>svg {
     position: absolute;
@@ -708,7 +687,7 @@
         opacity var(--transition);
 }
 
-/* чтобы текст не лез под иконку */
+
 .contact-after__item span,
 .contact-after__item h3,
 .contact-after__item p {
@@ -726,7 +705,7 @@
     text-transform: uppercase;
 }
 
-/* разные акценты для маленького текста */
+
 .contact-after__item:nth-child(1) span {
     color: var(--color-lime);
 }
@@ -758,7 +737,7 @@
     line-height: 1.55;
 }
 
-/* hover */
+
 .contact-after__item:hover {
     transform: translateY(-6px);
     border-color: rgba(255, 255, 255, 0.22);
@@ -772,7 +751,7 @@
     opacity: 1;
 }
 
-/* tablet */
+
 @media (max-width: 900px) {
     .contact-after__timeline {
         grid-template-columns: 1fr;
@@ -783,7 +762,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-after__item {
         min-height: 180px;
@@ -814,10 +793,7 @@
     }
 }
 
-/* ==============================
-   FINAL FIX — Contact After section
-   2 columns / low wide cards / right white icons
-============================== */
+
 
 .contact-after__timeline {
     display: grid !important;
@@ -913,7 +889,7 @@
     transform: rotate(-8deg) scale(1.06);
 }
 
-/* mobile: тоже 2 в ряд, но компактнее */
+
 @media (max-width: 760px) {
     .contact-after__timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -968,9 +944,7 @@
     }
 }
 
-/* ==============================
-   FINAL — Contact Request Photo Background Compact Form
-============================== */
+
 
 .contact-request {
     position: relative;
@@ -1187,10 +1161,7 @@
     }
 }
 
-/* ==============================
-   FINAL — Contact Direct Flow
-   low contact strips + statement + round photo services
-============================== */
+
 
 .contact-direct-flow {
     position: relative;
@@ -1198,7 +1169,7 @@
     overflow: hidden;
 }
 
-/* верхние низкие карточки */
+
 .contact-direct-flow .contact-direct__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1310,7 +1281,7 @@
     word-break: break-word;
 }
 
-/* красивый текст без карточки */
+
 .contact-direct__statement {
     width: min(100%, 1180px);
     margin: clamp(38px, 5vw, 66px) auto clamp(34px, 4.5vw, 54px);
@@ -1331,7 +1302,7 @@
     letter-spacing: -0.055em;
 }
 
-/* круглые сервисы */
+
 .contact-direct__services {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

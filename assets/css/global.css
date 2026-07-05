@@ -57,9 +57,7 @@
     --z-cookie: 1200;
 }
 
-/* ==============================
-   Reset / Base
-============================== */
+
 
 *,
 *::before,
@@ -177,9 +175,7 @@ main {
     outline-offset: 4px;
 }
 
-/* ==============================
-   Typography
-============================== */
+
 
 h1,
 h2,
@@ -295,9 +291,7 @@ h4 {
     color: rgba(247, 244, 239, 0.72);
 }
 
-/* ==============================
-   Layout Utilities
-============================== */
+
 
 .section {
     position: relative;
@@ -503,9 +497,7 @@ h4 {
     left: 135%;
 }
 
-/* ==============================
-   Buttons
-============================== */
+
 
 .btn,
 .nav-link,
@@ -634,9 +626,7 @@ h4 {
     background: rgba(28, 22, 18, 0.68);
 }
 
-/* ==============================
-   Header
-============================== */
+
 
 .site-header {
     position: sticky;
@@ -855,9 +845,7 @@ h4 {
     transform: rotate(-45deg);
 }
 
-/* ==============================
-   Desktop Dropdown
-============================== */
+
 
 .services-dropdown {
     position: absolute;
@@ -956,9 +944,7 @@ h4 {
     transform: translateX(3px);
 }
 
-/* ==============================
-   Mobile Menu
-============================== */
+
 
 .mobile-menu {
     position: fixed;
@@ -1119,9 +1105,7 @@ h4 {
     color: var(--color-lime);
 }
 
-/* ==============================
-   Footer
-============================== */
+
 
 .site-footer {
     position: relative;
@@ -1249,9 +1233,7 @@ h4 {
     color: var(--color-lime);
 }
 
-/* ==============================
-   Forms Base
-============================== */
+
 
 .form-grid {
     display: grid;
@@ -1432,9 +1414,7 @@ h4 {
     overflow: hidden !important;
 }
 
-/* ==============================
-   Accordions Base
-============================== */
+
 
 .accordion {
     display: grid;
@@ -1521,9 +1501,7 @@ h4 {
     color: rgba(247, 244, 239, 0.72);
 }
 
-/* ==============================
-   Shared CTA Card
-============================== */
+
 
 .prefooter-cta {
     background: var(--color-beige);
@@ -1582,9 +1560,7 @@ h4 {
     font-size: clamp(1rem, 1.4vw, 1.16rem);
 }
 
-/* ==============================
-   Cookie Banner
-============================== */
+
 
 .cookie-banner {
     position: fixed;
@@ -1637,9 +1613,7 @@ h4 {
     font-size: 0.7rem;
 }
 
-/* ==============================
-   Swiper / Slider Shared
-============================== */
+
 
 .swiper {
     width: 100%;
@@ -1712,9 +1686,7 @@ h4 {
     transition: width var(--transition);
 }
 
-/* ==============================
-   Labels / Chips / Badges
-============================== */
+
 
 .chip-list {
     display: flex;
@@ -1795,9 +1767,7 @@ h4 {
     color: var(--color-lime);
 }
 
-/* ==============================
-   Legal / Disclaimer Shared
-============================== */
+
 
 .disclaimer-block {
     padding: clamp(20px, 3vw, 30px);
@@ -1816,9 +1786,7 @@ h4 {
     color: rgba(247, 244, 239, 0.76);
 }
 
-/* ==============================
-   Motion
-============================== */
+
 
 [data-aos] {
     max-width: 100%;
@@ -1856,9 +1824,7 @@ h4 {
     }
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
     :root {
@@ -2131,9 +2097,7 @@ h4 {
     }
 }
 
-/* ==============================
-   Reduced Motion
-============================== */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2147,7 +2111,7 @@ h4 {
     }
 }
 
-/* FIX: force sticky/fixed header on all pages */
+
 .site-header {
     position: fixed;
     top: 0;
@@ -2164,12 +2128,12 @@ h4 {
     box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
 }
 
-/* чтобы контент не прятался под fixed header */
+
 body {
     padding-top: var(--header-height);
 }
 
-/* если hero должен заходить под хедер красиво */
+
 .home-hero,
 .about-hero,
 .services-hero,
@@ -2181,10 +2145,7 @@ body {
 }
 
 
-/* ==============================
-   GLOBAL MOBILE/TABLET HEADINGS FIX
-   H1 / H2 centered and balanced
-============================== */
+
 
 @media (max-width: 1180px) {
 

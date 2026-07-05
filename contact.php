@@ -1,16 +1,6 @@
 <?php
 
-/**
- * Lawnora contact/request form endpoint.
- *
- * This endpoint only sends emails on a server that supports PHP mail().
- * For local testing, run:
- *
- * php -S localhost:8000
- *
- * Then open:
- * http://localhost:8000/contact.html
- */
+
 
 declare(strict_types=1);
 

@@ -1,11 +1,6 @@
-/* ==============================
-   ABOUT PAGE
-   Sections count: 11
-============================== */
 
-/* ==============================
-   Section 1 — About Hero
-============================== */
+
+
 
 .about-hero {
     position: relative;
@@ -82,9 +77,7 @@
     flex: 0 0 auto;
 }
 
-/* ==============================
-   Section 2 — Brand Story
-============================== */
+
 
 .about-story__layout {
     display: grid;
@@ -136,9 +129,7 @@
     line-height: 1.78;
 }
 
-/* ==============================
-   Section 3 — Platform Model
-============================== */
+
 
 .about-model__panels {
     display: grid;
@@ -197,9 +188,7 @@
     line-height: 1.7;
 }
 
-/* ==============================
-   Section 4 — Is / Is Not
-============================== */
+
 
 .about-compare__grid {
     display: grid;
@@ -300,9 +289,7 @@
 
 
 
-/* ==============================
-   Section 7 — Provider Choice
-============================== */
+
 
 .about-choice__layout {
     display: grid;
@@ -318,9 +305,7 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 8 — Image Marquee
-============================== */
+
 
 .about-marquee {
     padding-bottom: clamp(80px, 9vw, 140px);
@@ -391,9 +376,7 @@
     text-transform: uppercase;
 }
 
-/* ==============================
-   Section 9 — Trust
-============================== */
+
 
 .about-trust__layout {
     display: grid;
@@ -428,9 +411,7 @@
     color: var(--color-soft-white);
 }
 
-/* ==============================
-   Section 10 — About FAQ
-============================== */
+
 
 .about-faq__layout {
     display: grid;
@@ -446,17 +427,13 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 11 — Prefooter CTA
-============================== */
+
 
 .prefooter-cta {
     padding-top: var(--section-y-small);
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
 
@@ -628,7 +605,7 @@
     }
 }
 
-/* About Section 3 — icons top right only */
+
 .about-model__panel {
     position: relative;
 }
@@ -654,9 +631,7 @@
     margin-bottom: 0;
 }
 
-/* ==============================
-   Section 5 — Values Round Photo Cards
-============================== */
+
 
 .about-values__heading {
     display: grid;
@@ -809,10 +784,7 @@
 }
 
 
-/* ==============================
-   FIX — Compact Scenario Board
-   less height / less empty space
-============================== */
+
 
 .about-scenario-board.section {
     padding-block: clamp(58px, 7vw, 92px);
@@ -947,10 +919,7 @@
     }
 }
 
-/* ==============================
-   Section 6 — Scenario Board Harmonized
-   heading left / list right / photo / horizontal copy
-============================== */
+
 
 .about-scenarios.about-scenario-board {
     position: relative;
@@ -1236,7 +1205,7 @@
     }
 }
 
-/* Section 8 — keep marquee inside container */
+
 .about-marquee .container-wide {
     overflow: hidden;
 }
@@ -1247,10 +1216,7 @@
     margin-inline: 0;
 }
 
-/* ==============================
-   Section 7 — Mature Photo Accordion
-   inspired by editorial horizontal accordions
-============================== */
+
 
 .about-choice-gallery {
     position: relative;

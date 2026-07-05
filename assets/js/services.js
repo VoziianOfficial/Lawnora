@@ -197,7 +197,7 @@
                 try {
                     sessionStorage.setItem("lawnoraLastServiceRequest", document.title);
                 } catch (error) {
-                    /* silent */
+                    
                 }
             });
         });

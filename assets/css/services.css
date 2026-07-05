@@ -1,12 +1,6 @@
-/* ==============================
-   SERVICE DETAIL PAGES
-   Shared for all 6 service pages
-   Sections count per page: 7
-============================== */
 
-/* ==============================
-   Section 1 — Service Hero
-============================== */
+
+
 
 .service-hero {
     position: relative;
@@ -115,9 +109,7 @@
     flex: 0 0 auto;
 }
 
-/* ==============================
-   Section 2 — Service Overview
-============================== */
+
 
 .service-overview__layout {
     display: grid;
@@ -243,9 +235,7 @@
     line-height: 1.62;
 }
 
-/* ==============================
-   Section 3 — Request Board
-============================== */
+
 
 .service-board__grid {
     display: grid;
@@ -324,9 +314,7 @@
     line-height: 1.64;
 }
 
-/* ==============================
-   Section 4 — Process / Provider Questions
-============================== */
+
 
 .service-process__layout {
     display: grid;
@@ -401,9 +389,7 @@
     line-height: 1.68;
 }
 
-/* ==============================
-   Section 5 — Compare / Related
-============================== */
+
 
 .service-related__layout {
     display: grid;
@@ -528,9 +514,7 @@
     transform: translateX(4px);
 }
 
-/* ==============================
-   Section 6 — Service FAQ
-============================== */
+
 
 .service-faq__layout {
     display: grid;
@@ -546,17 +530,13 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 7 — Prefooter CTA
-============================== */
+
 
 .prefooter-cta {
     padding-top: var(--section-y-small);
 }
 
-/* ==============================
-   Extra Shared Service Components
-============================== */
+
 
 .service-callout {
     display: grid;
@@ -617,9 +597,7 @@
     background: var(--color-lime);
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
 
@@ -734,9 +712,7 @@
 }
 
 
-/* ==============================
-   FINAL — Section 3 Service Board Field Map
-============================== */
+
 
 .service-board-field {
     position: relative;
@@ -977,9 +953,7 @@
     }
 }
 
-/* ==============================
-   FINAL — Section 3 Horizontal Request Board
-============================== */
+
 
 .service-board-horizontal {
     position: relative;
@@ -1013,7 +987,7 @@
     pointer-events: none;
 }
 
-/* верх — горизонтально */
+
 .service-board-horizontal .service-board__head {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
@@ -1042,7 +1016,7 @@
     color: rgba(247, 244, 239, 0.76);
 }
 
-/* низ — 2 карточки в ряд */
+
 .service-board-horizontal .service-board__map {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1194,7 +1168,7 @@
     transform: rotate(-8deg) scale(1.05);
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .service-board-horizontal .service-board__head {
         grid-template-columns: 1fr;
@@ -1216,7 +1190,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .service-board-horizontal .service-board__head {
         margin-bottom: 30px;
@@ -1259,7 +1233,7 @@
     }
 }
 
-/* BACKGROUND PHOTO — Section 3 horizontal service board */
+
 
 .service-board-horizontal {
     background:
@@ -1285,7 +1259,7 @@
     z-index: 2;
 }
 
-/* карточки чуть плотнее на фото */
+
 .service-board-horizontal .service-board__row {
     background: rgba(28, 22, 18, 0.58);
     backdrop-filter: blur(8px);

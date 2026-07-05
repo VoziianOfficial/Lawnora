@@ -1,11 +1,6 @@
-/* ==============================
-   HOME PAGE
-   Sections count: 11
-============================== */
 
-/* ==============================
-   Section 1 — Hero
-============================== */
+
+
 
 .home-hero {
     position: relative;
@@ -81,9 +76,7 @@
     line-height: 1.45;
 }
 
-/* ==============================
-   Section 2 — Quick Service Path Selector
-============================== */
+
 
 .home-selector__layout {
     display: grid;
@@ -232,9 +225,7 @@
     stroke-width: 1.55;
 }
 
-/* ==============================
-   Section 3 — Platform Intro
-============================== */
+
 
 .home-intro__media {
     min-height: 620px;
@@ -319,9 +310,7 @@
 }
 
 
-/* ==============================
-   Section 6 — Provider Fit
-============================== */
+
 
 .home-fit__layout {
     display: grid;
@@ -366,9 +355,7 @@
     align-self: center;
 }
 
-/* ==============================
-   Section 7 — Process Slider
-============================== */
+
 
 .home-process__layout {
     display: grid;
@@ -455,9 +442,7 @@
     line-height: 1.55;
 }
 
-/* ==============================
-   Section 8 — Comparison Panel
-============================== */
+
 
 .home-compare__layout {
     display: grid;
@@ -524,9 +509,7 @@
     color: rgba(247, 244, 239, 0.72);
 }
 
-/* ==============================
-   Section 9 — Image Story
-============================== */
+
 
 .home-story {
     position: relative;
@@ -626,9 +609,7 @@
     background: var(--color-lime);
 }
 
-/* ==============================
-   Section 10 — FAQ
-============================== */
+
 
 .home-faq__layout {
     display: grid;
@@ -644,17 +625,13 @@
     gap: 22px;
 }
 
-/* ==============================
-   Section 11 — Prefooter CTA
-============================== */
+
 
 .prefooter-cta {
     padding-top: var(--section-y-small);
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1180px) {
 
@@ -817,10 +794,7 @@
     }
 }
 
-/* ==============================
-   Home Service Ribbon
-   Clean premium bright belt
-============================== */
+
 
 .home-service-ribbon {
     position: relative;
@@ -996,7 +970,7 @@
     }
 }
 
-/* Clean transparent ribbon version */
+
 .home-service-ribbon {
     background: transparent;
     border-top: 0;
@@ -1027,9 +1001,7 @@
 }
 
 
-/* ==============================
-   Home Selector Round Icon Buttons
-============================== */
+
 
 .home-selector__chips {
     display: flex;
@@ -1176,10 +1148,7 @@
 }
 
 
-/* ==============================
-   Section 4 — Home Request Ledger
-   New clean premium section
-============================== */
+
 
 .home-request-ledger {
     background: var(--color-beige-4);
@@ -1483,10 +1452,7 @@
     }
 }
 
-/* ==============================
-   Section 5 — Popular Book Slideshow
-   Lower full-photo section + real page turn controls
-============================== */
+
 
 .home-popular-showcase {
     position: relative;
@@ -1745,7 +1711,7 @@
     margin-top: 8px;
 }
 
-/* click zones */
+
 .home-popular-showcase__page-zone {
     position: absolute;
     top: 0;
@@ -1810,7 +1776,7 @@
     transform: translate(8px, -50%);
 }
 
-/* book turn animation */
+
 .home-popular-showcase.is-changing .home-popular-showcase__content .section-title,
 .home-popular-showcase.is-changing .home-popular-showcase__content .lead,
 .home-popular-showcase.is-changing .home-popular-showcase__detail {
@@ -1938,9 +1904,7 @@
     }
 }
 
-/* ==============================
-   FIX — Process swiper should not cover left text
-============================== */
+
 
 .home-process__layout {
     overflow: hidden;
@@ -1963,7 +1927,7 @@
     height: auto;
 }
 
-/* чтобы активная карточка не обрезалась некрасиво */
+
 .home-process__slide.swiper-slide-active {
     z-index: 3;
 }
@@ -1976,7 +1940,7 @@
     z-index: 2;
 }
 
-/* softer bottom shadow for process cards */
+
 .home-process__slide {
     box-shadow: 0 14px 34px -22px rgba(47, 36, 29, 0.26);
 }
@@ -1989,9 +1953,7 @@
     pointer-events: auto;
 }
 
-/* ==============================
-   Section 8 — Compare Cards Grid
-============================== */
+
 
 .home-compare {
     background: var(--color-dark-brown);
@@ -2136,9 +2098,7 @@
     }
 }
 
-/* ==============================
-   Section 8 — Light Leaf Cards 3x2
-============================== */
+
 
 .home-compare-leaf {
     position: relative;
@@ -2165,7 +2125,7 @@
     stroke-width: 1.05;
 }
 
-/* большие листья, которые выходят за границы секции */
+
 .home-compare-leaf__decor i:nth-child(1),
 .home-compare-leaf__decor svg:nth-child(1) {
     width: clamp(220px, 26vw, 480px);
@@ -2345,7 +2305,7 @@
     transform: rotate(-10deg) scale(1.1);
 }
 
-/* чтобы листья могли визуально заходить на следующую светлую секцию */
+
 .home-compare-leaf+.section-lighter,
 .home-compare-leaf+.home-intro {
     position: relative;

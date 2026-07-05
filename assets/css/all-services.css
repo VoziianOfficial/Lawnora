@@ -1,11 +1,6 @@
-/* ==============================
-   ALL SERVICES PAGE
-   Sections count: 10
-============================== */
 
-/* ==============================
-   Section 1 — Services Hero
-============================== */
+
+
 
 .services-hero {
     position: relative;
@@ -82,9 +77,7 @@
     flex: 0 0 auto;
 }
 
-/* ==============================
-   Section 2 — Service Navigator
-============================== */
+
 
 .service-navigator {
     position: relative;
@@ -157,9 +150,7 @@
     color: var(--color-dark-green);
 }
 
-/* ==============================
-   Section 3 — Featured Services Grid
-============================== */
+
 
 .services-grid__cards {
     display: grid;
@@ -287,9 +278,7 @@
     height: 16px;
 }
 
-/* ==============================
-   Section 4 — Service Preview Slideshow
-============================== */
+
 
 .services-preview__layout {
     display: grid;
@@ -416,9 +405,7 @@
     text-transform: uppercase;
 }
 
-/* ==============================
-   Section 5 — How To Choose
-============================== */
+
 
 .services-choose__panels {
     display: grid;
@@ -474,9 +461,7 @@
     line-height: 1.65;
 }
 
-/* ==============================
-   Section 6 — Provider Questions
-============================== */
+
 
 .services-questions__layout {
     display: grid;
@@ -492,9 +477,7 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 7 — Scope Matrix
-============================== */
+
 
 .services-matrix__rows {
     display: grid;
@@ -551,9 +534,7 @@
     flex: 0 0 auto;
 }
 
-/* ==============================
-   Section 8 — Matching Note
-============================== */
+
 
 .services-note__layout {
     display: grid;
@@ -608,9 +589,7 @@
     text-transform: uppercase;
 }
 
-/* ==============================
-   Section 9 — Services FAQ
-============================== */
+
 
 .services-faq__layout {
     display: grid;
@@ -626,17 +605,13 @@
     gap: 20px;
 }
 
-/* ==============================
-   Section 10 — Prefooter CTA
-============================== */
+
 
 .prefooter-cta {
     padding-top: var(--section-y-small);
 }
 
-/* ==============================
-   Responsive
-============================== */
+
 
 @media (max-width: 1240px) {
     .services-choose__panels {
@@ -822,10 +797,7 @@
     }
 }
 
-/* ==============================
-   FINAL — Service Navigator Clean Premium Bar
-   no cards / one row / translucent strip
-============================== */
+
 
 .service-navigator {
     position: relative;
@@ -835,7 +807,7 @@
     background: var(--color-beige-4);
 }
 
-/* мягкий переход листьями вниз */
+
 .service-navigator::after {
     content: "";
     position: absolute;
@@ -895,7 +867,7 @@
     display: none;
 }
 
-/* heading */
+
 .service-navigator__head {
     position: relative;
     z-index: 2;
@@ -906,7 +878,7 @@
     margin-bottom: clamp(24px, 4vw, 36px);
 }
 
-/* сама навигация — НЕ карточки */
+
 .service-navigator__bar,
 .service-navigator__bar.aos-init,
 .service-navigator__bar.aos-animate {
@@ -927,7 +899,7 @@
     backdrop-filter: blur(16px);
 }
 
-/* ссылки как сегменты одной панели */
+
 .service-navigator__pill,
 .service-navigator__pill:nth-child(2n),
 .service-navigator__pill:nth-child(4n),
@@ -968,7 +940,7 @@
     border-right: 0;
 }
 
-/* убираем старые декоративные круги/карточные эффекты */
+
 .service-navigator__pill::before {
     display: none;
 }
@@ -1031,7 +1003,7 @@
     transform: rotate(-8deg) scale(1.08);
 }
 
-/* request можно чуть выделить, но не как карточку */
+
 .service-navigator__pill--request {
     background: rgba(47, 74, 62, 0.055);
 }
@@ -1040,7 +1012,7 @@
     background: rgba(47, 74, 62, 0.11);
 }
 
-/* чтобы следующая секция принимала листья */
+
 .services-grid {
     position: relative;
     z-index: 1;
@@ -1063,7 +1035,7 @@
     pointer-events: none;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .service-navigator__head {
         grid-template-columns: 1fr;
@@ -1094,7 +1066,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .service-navigator {
         overflow: hidden;
@@ -1136,9 +1108,7 @@
 }
 
 
-/* ==============================
-   Section 5 — Round Hover Panels
-============================== */
+
 
 .services-choose__panels {
     display: grid;
@@ -1298,7 +1268,7 @@
     }
 }
 
-/* FIX — Section 5 icons perfectly centered in circles */
+
 
 .services-choose__icon {
     position: absolute;
@@ -1329,10 +1299,7 @@
 }
 
 
-/* ==============================
-   Section 7 — Scope Cards 2x2
-   centered heading / 4 wide cards / same soft background
-============================== */
+
 
 .services-scope-cards {
     position: relative;
@@ -1525,10 +1492,7 @@
     }
 }
 
-/* ==============================
-   FIX — Section 6 Text Opening Slider
-   more text / lower cards / smoother opening
-============================== */
+
 
 .services-question-slider {
     position: relative;
@@ -1833,9 +1797,7 @@
     }
 }
 
-/* ==============================
-   FINAL FIX — Section 6 smoother lower text slider
-============================== */
+
 
 .services-question-slider__rail {
     min-height: clamp(235px, 21vw, 270px);
@@ -2010,9 +1972,7 @@
 }
 
 
-/* ==============================
-   Section 8 — Full Width Photo Text Slideshow
-============================== */
+
 
 .services-note-showcase {
     position: relative;
@@ -2208,7 +2168,7 @@
     }
 }
 
-/* FIX — Section 8 buttons overlap text */
+
 
 .services-note-showcase__inner {
     min-height: auto;
@@ -2278,10 +2238,7 @@
     }
 }
 
-/* ==============================
-   MOBILE FIX — Section 6 Question Slider
-   desktop slider stays / mobile becomes clean stacked cards
-============================== */
+
 
 @media (max-width: 760px) {
     .services-question-slider {
@@ -2456,7 +2413,7 @@
     }
 }
 
-/* MOBILE FIX — Section 5 one horizontal row */
+
 
 @media (max-width: 760px) {
     .services-choose {
@@ -2531,7 +2488,7 @@
     }
 }
 
-/* FIX — Section 5 mobile row without right gap */
+
 
 @media (max-width: 760px) {
     .services-choose {
