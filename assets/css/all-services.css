@@ -1037,6 +1037,10 @@
 
 
 @media (max-width: 1180px) {
+    .service-navigator {
+        display: none;
+    }
+
     .service-navigator__head {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2542,4 +2546,19 @@
         min-width: 205px;
         max-width: 205px;
     }
+}
+/* FIX — service navigator clicks */
+
+.service-navigator__bar {
+    touch-action: pan-x pan-y;
+}
+
+.service-navigator__bar.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.service-navigator__pill {
+    cursor: pointer;
+    pointer-events: auto;
 }

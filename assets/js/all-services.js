@@ -123,44 +123,162 @@
         });
     }
 
-    function initNavigatorDrag() {
-        const nav = document.querySelector(".service-navigator__bar");
+    function initServiceNavigator() {
+        const nav = document.querySelector("[data-scroll-nav]");
         if (!nav) return;
 
-        let isDown = false;
+        const links = Array.from(nav.querySelectorAll(".service-navigator__pill[href]"));
+
+        let pointerDown = false;
         let startX = 0;
         let scrollLeft = 0;
+        let didDrag = false;
 
-        nav.addEventListener("pointerdown", (event) => {
-            isDown = true;
-            nav.classList.add("is-dragging");
-            startX = event.pageX - nav.offsetLeft;
-            scrollLeft = nav.scrollLeft;
-            nav.setPointerCapture(event.pointerId);
-        });
+        function getOffset() {
+            const header = document.querySelector(".site-header");
+            const headerHeight = header ? header.offsetHeight : 0;
+            const navHeight = nav.offsetHeight || 0;
 
-        nav.addEventListener("pointermove", (event) => {
-            if (!isDown) return;
+            return headerHeight + navHeight + 28;
+        }
 
-            const x = event.pageX - nav.offsetLeft;
-            const walk = (x - startX) * 1.4;
-            nav.scrollLeft = scrollLeft - walk;
-        });
+        function getHashTarget(hash) {
+            if (!hash || !hash.startsWith("#")) return null;
 
-        function stopDrag(event) {
-            if (!isDown) return;
+            const id = decodeURIComponent(hash.slice(1));
+            if (!id) return null;
 
-            isDown = false;
-            nav.classList.remove("is-dragging");
+            return document.getElementById(id);
+        }
 
-            if (event && event.pointerId && nav.hasPointerCapture(event.pointerId)) {
-                nav.releasePointerCapture(event.pointerId);
+        function setActive(activeLink) {
+            links.forEach((link) => {
+                const isActive = link === activeLink;
+
+                link.classList.toggle("is-active", isActive);
+
+                if (isActive) {
+                    link.setAttribute("aria-current", "true");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
+        }
+
+        function scrollToTarget(target, link) {
+            const top = target.getBoundingClientRect().top + window.pageYOffset - getOffset();
+
+            window.scrollTo({
+                top: Math.max(0, top),
+                behavior: "smooth"
+            });
+
+            setActive(link);
+
+            if (link.hash) {
+                window.history.pushState(null, "", link.hash);
+            }
+
+            if (window.AOS && typeof window.AOS.refreshHard === "function") {
+                window.setTimeout(() => window.AOS.refreshHard(), 420);
             }
         }
 
-        nav.addEventListener("pointerup", stopDrag);
-        nav.addEventListener("pointerleave", stopDrag);
-        nav.addEventListener("pointercancel", stopDrag);
+        /* click navigation */
+        nav.addEventListener(
+            "click",
+            (event) => {
+                const link = event.target.closest(".service-navigator__pill[href]");
+                if (!link || !nav.contains(link)) return;
+
+                if (didDrag) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return;
+                }
+
+                const href = link.getAttribute("href");
+
+                /* внешние ссылки типа contact.html#request-form не трогаем */
+                if (!href || !href.startsWith("#")) return;
+
+                const target = getHashTarget(href);
+                if (!target) return;
+
+                event.preventDefault();
+                scrollToTarget(target, link);
+            },
+            true
+        );
+
+        /* horizontal drag только если реально тянем */
+        nav.addEventListener("pointerdown", (event) => {
+            pointerDown = true;
+            didDrag = false;
+            startX = event.clientX;
+            scrollLeft = nav.scrollLeft;
+        });
+
+        nav.addEventListener("pointermove", (event) => {
+            if (!pointerDown) return;
+
+            const distance = event.clientX - startX;
+
+            if (Math.abs(distance) < 10) return;
+
+            didDrag = true;
+            nav.classList.add("is-dragging");
+            nav.scrollLeft = scrollLeft - distance;
+        });
+
+        function stopPointer() {
+            pointerDown = false;
+            nav.classList.remove("is-dragging");
+
+            window.setTimeout(() => {
+                didDrag = false;
+            }, 80);
+        }
+
+        nav.addEventListener("pointerup", stopPointer);
+        nav.addEventListener("pointercancel", stopPointer);
+        nav.addEventListener("pointerleave", stopPointer);
+
+        /* active state on scroll */
+        const observedItems = links
+            .map((link) => {
+                const href = link.getAttribute("href");
+
+                return {
+                    link,
+                    target: href && href.startsWith("#") ? getHashTarget(href) : null
+                };
+            })
+            .filter((item) => item.target);
+
+        if ("IntersectionObserver" in window && observedItems.length) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    const visible = entries
+                        .filter((entry) => entry.isIntersecting)
+                        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+                    if (!visible) return;
+
+                    const current = observedItems.find((item) => item.target === visible.target);
+                    if (!current) return;
+
+                    setActive(current.link);
+                },
+                {
+                    root: null,
+                    threshold: [0.12, 0.25, 0.45],
+                    rootMargin: "-38% 0px -48% 0px"
+                }
+            );
+
+            observedItems.forEach((item) => observer.observe(item.target));
+        }
     }
 
     function initCardMouseGlow() {
@@ -305,7 +423,7 @@
         initServicePreviewSwiper();
         initServiceCardKeyboardState();
         initMatrixMobileLabels();
-        initNavigatorDrag();
+        initServiceNavigator();
         initCardMouseGlow();
         initQuestionSlider();
         initServicesNoteSlider();
