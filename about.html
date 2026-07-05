@@ -414,147 +414,194 @@
             </div>
         </section>
 
-        <!-- Section 6 -->
-        <section class="section section-green about-scenarios" aria-labelledby="about-scenarios-title">
-            <div class="container-wide about-scenarios__layout" data-tabs>
-                <div class="about-scenarios__tabs" data-aos="fade-right">
-                    <p class="section-kicker section-kicker--light">Interactive lawn scenarios</p>
-                    <h2 class="section-title" id="about-scenarios-title">
-                        Different Lawn Needs Ask For Different Questions.
-                    </h2>
+<!-- Section 6 -->
+<section class="section section-green about-scenarios about-scenario-board"
+    aria-labelledby="about-scenario-board-title">
+    <div class="container-wide about-scenario-board__wrap" data-tabs>
+        <div class="about-scenario-board__top">
+            <div class="about-scenario-board__heading" data-aos="fade-right">
+                <p class="section-kicker section-kicker--light">Interactive lawn scenarios</p>
+                <h2 class="section-title" id="about-scenario-board-title">
+                    Different Lawn Needs Ask For Different Questions.
+                </h2>
+            </div>
 
-                    <div class="about-scenarios__buttons" role="tablist" aria-label="Lawn care scenarios">
-                        <button class="about-scenarios__button is-active" type="button" data-tab-button="ongoing">
-                            <i data-lucide="leaf" aria-hidden="true"></i>
-                            Ongoing lawn care
-                        </button>
-                        <button class="about-scenarios__button" type="button" data-tab-button="cleanup">
-                            <i data-lucide="tree-pine" aria-hidden="true"></i>
-                            One-time seasonal cleanup
-                        </button>
-                        <button class="about-scenarios__button" type="button" data-tab-button="recovery">
-                            <i data-lucide="sprout" aria-hidden="true"></i>
-                            Lawn recovery
-                        </button>
-                        <button class="about-scenarios__button" type="button" data-tab-button="detail">
-                            <i data-lucide="scissors" aria-hidden="true"></i>
-                            Yard detail refresh
-                        </button>
-                        <button class="about-scenarios__button" type="button" data-tab-button="sod">
-                            <i data-lucide="badge-check" aria-hidden="true"></i>
-                            New sod or patch repair
-                        </button>
+            <div class="about-scenario-board__nav" role="tablist" aria-label="Lawn care scenarios" data-aos="fade-left">
+                <button class="about-scenario-board__button is-active" type="button" data-tab-button="ongoing">
+                    <i data-lucide="leaf" aria-hidden="true"></i>
+                    <span>Ongoing lawn care</span>
+                </button>
+
+                <button class="about-scenario-board__button" type="button" data-tab-button="cleanup">
+                    <i data-lucide="tree-pine" aria-hidden="true"></i>
+                    <span>One-time seasonal cleanup</span>
+                </button>
+
+                <button class="about-scenario-board__button" type="button" data-tab-button="recovery">
+                    <i data-lucide="sprout" aria-hidden="true"></i>
+                    <span>Lawn recovery</span>
+                </button>
+
+                <button class="about-scenario-board__button" type="button" data-tab-button="detail">
+                    <i data-lucide="scissors" aria-hidden="true"></i>
+                    <span>Yard detail refresh</span>
+                </button>
+
+                <button class="about-scenario-board__button" type="button" data-tab-button="sod">
+                    <i data-lucide="badge-check" aria-hidden="true"></i>
+                    <span>New sod or patch repair</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="about-scenario-board__stage" data-aos="fade-up">
+            <article class="about-scenario-board__panel is-active" data-tab-panel="ongoing">
+                <div class="about-scenario-board__photo">
+                    <img src="assets/images/service-1.jpg" alt="Ongoing lawn care scenario">
+                </div>
+
+                <div class="about-scenario-board__copy">
+                    <div class="about-scenario-board__title-block">
+                        <span class="badge badge--light">Ongoing care</span>
+                        <h3>Recurring upkeep needs a frequency conversation.</h3>
+                    </div>
+
+                    <div class="about-scenario-board__text-block">
+                        <p>
+                            For mowing and maintenance requests, homeowners may want to compare visit frequency,
+                            trimming, edging, cleanup expectations, access, and scheduling windows.
+                        </p>
+                        <ul>
+                            <li>What is included in each visit?</li>
+                            <li>How often can the provider come?</li>
+                            <li>Are trimming and cleanup included?</li>
+                        </ul>
+                        <a class="btn btn-lime" href="lawn-mowing-maintenance.html">
+                            <span>View Mowing Category</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
+            </article>
 
-                <div class="about-scenarios__panels" data-aos="fade-left">
-                    <article class="about-scenarios__panel is-active" data-tab-panel="ongoing">
-                        <img src="assets/images/service-1.jpg" alt="Ongoing lawn care scenario">
-                        <div>
-                            <span class="badge badge--light">Ongoing care</span>
-                            <h3>Recurring upkeep needs a frequency conversation.</h3>
-                            <p>
-                                For mowing and maintenance requests, homeowners may want to compare visit frequency,
-                                trimming, edging, cleanup expectations, access, and scheduling windows.
-                            </p>
-                            <ul>
-                                <li>What is included in each visit?</li>
-                                <li>How often can the provider come?</li>
-                                <li>Are trimming and cleanup included?</li>
-                            </ul>
-                            <a class="btn btn-lime" href="lawn-mowing-maintenance.html">
-                                <span>View Mowing Category</span>
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="about-scenarios__panel" data-tab-panel="cleanup" hidden>
-                        <img src="assets/images/service-4.jpg" alt="Seasonal yard cleanup scenario">
-                        <div>
-                            <span class="badge badge--light">Seasonal cleanup</span>
-                            <h3>Clean-up requests depend on debris, access, and hauling.</h3>
-                            <p>
-                                Seasonal cleanup conversations often include leaves, branches, beds, borders, and
-                                whether removed material is bagged, hauled, or left for municipal pickup.
-                            </p>
-                            <ul>
-                                <li>What debris is included?</li>
-                                <li>Will material be hauled away?</li>
-                                <li>Is this spring, fall, or storm-related cleanup?</li>
-                            </ul>
-                            <a class="btn btn-lime" href="seasonal-yard-cleanup.html">
-                                <span>View Clean-Up Category</span>
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="about-scenarios__panel" data-tab-panel="recovery" hidden>
-                        <img src="assets/images/service-3.jpg" alt="Lawn recovery scenario">
-                        <div>
-                            <span class="badge badge--light">Recovery</span>
-                            <h3>Thin or compacted lawns may need more context.</h3>
-                            <p>
-                                Aeration and overseeding requests can involve soil condition, grass thinning, seasonal
-                                timing, watering expectations, and preparation questions.
-                            </p>
-                            <ul>
-                                <li>Is core aeration being discussed?</li>
-                                <li>Is overseeding part of the request?</li>
-                                <li>What follow-up care should be expected?</li>
-                            </ul>
-                            <a class="btn btn-lime" href="lawn-aeration-overseeding.html">
-                                <span>View Aeration Category</span>
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="about-scenarios__panel" data-tab-panel="detail" hidden>
-                        <img src="assets/images/service-6.jpg" alt="Yard detail refresh scenario">
-                        <div>
-                            <span class="badge badge--light">Detail refresh</span>
-                            <h3>Edges, shrubs, and borders benefit from clear style notes.</h3>
-                            <p>
-                                Hedge and edge care requests may include shaping style, border cleanup, shrub height,
-                                cleanup expectations, and whether the service is recurring or one-time.
-                            </p>
-                            <ul>
-                                <li>Which areas need detail work?</li>
-                                <li>Is shaping or simple trimming needed?</li>
-                                <li>Should debris cleanup be included?</li>
-                            </ul>
-                            <a class="btn btn-lime" href="shrub-hedge-edge-care.html">
-                                <span>View Hedge Care Category</span>
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="about-scenarios__panel" data-tab-panel="sod" hidden>
-                        <img src="assets/images/service-5.jpg" alt="Sod or patch repair scenario">
-                        <div>
-                            <span class="badge badge--light">Repair</span>
-                            <h3>Patch repair and sod conversations need area details.</h3>
-                            <p>
-                                Sod and lawn repair requests may depend on square footage, soil preparation, watering,
-                                grass type, access, and timing.
-                            </p>
-                            <ul>
-                                <li>How large is the damaged area?</li>
-                                <li>Is preparation included?</li>
-                                <li>Who explains watering expectations?</li>
-                            </ul>
-                            <a class="btn btn-lime" href="sod-installation-lawn-repair.html">
-                                <span>View Sod Repair Category</span>
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
+            <article class="about-scenario-board__panel" data-tab-panel="cleanup" hidden>
+                <div class="about-scenario-board__photo">
+                    <img src="assets/images/service-4.jpg" alt="Seasonal yard cleanup scenario">
                 </div>
-            </div>
-        </section>
+
+                <div class="about-scenario-board__copy">
+                    <div class="about-scenario-board__title-block">
+                        <span class="badge badge--light">Seasonal cleanup</span>
+                        <h3>Clean-up requests depend on debris, access, and hauling.</h3>
+                    </div>
+
+                    <div class="about-scenario-board__text-block">
+                        <p>
+                            Seasonal cleanup conversations often include leaves, branches, beds, borders, and whether
+                            removed material is bagged, hauled, or left for municipal pickup.
+                        </p>
+                        <ul>
+                            <li>What debris is included?</li>
+                            <li>Will material be hauled away?</li>
+                            <li>Is this spring, fall, or storm-related cleanup?</li>
+                        </ul>
+                        <a class="btn btn-lime" href="seasonal-yard-cleanup.html">
+                            <span>View Clean-Up Category</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="about-scenario-board__panel" data-tab-panel="recovery" hidden>
+                <div class="about-scenario-board__photo">
+                    <img src="assets/images/service-3.jpg" alt="Lawn recovery scenario">
+                </div>
+
+                <div class="about-scenario-board__copy">
+                    <div class="about-scenario-board__title-block">
+                        <span class="badge badge--light">Recovery</span>
+                        <h3>Thin or compacted lawns may need more context.</h3>
+                    </div>
+
+                    <div class="about-scenario-board__text-block">
+                        <p>
+                            Aeration and overseeding requests can involve soil condition, grass thinning, seasonal
+                            timing, watering expectations, and preparation questions.
+                        </p>
+                        <ul>
+                            <li>Is core aeration being discussed?</li>
+                            <li>Is overseeding part of the request?</li>
+                            <li>What follow-up care should be expected?</li>
+                        </ul>
+                        <a class="btn btn-lime" href="lawn-aeration-overseeding.html">
+                            <span>View Aeration Category</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="about-scenario-board__panel" data-tab-panel="detail" hidden>
+                <div class="about-scenario-board__photo">
+                    <img src="assets/images/service-6.jpg" alt="Yard detail refresh scenario">
+                </div>
+
+                <div class="about-scenario-board__copy">
+                    <div class="about-scenario-board__title-block">
+                        <span class="badge badge--light">Detail refresh</span>
+                        <h3>Edges, shrubs, and borders benefit from clear style notes.</h3>
+                    </div>
+
+                    <div class="about-scenario-board__text-block">
+                        <p>
+                            Hedge and edge care requests may include shaping style, border cleanup, shrub height,
+                            cleanup expectations, and whether the service is recurring or one-time.
+                        </p>
+                        <ul>
+                            <li>Which areas need detail work?</li>
+                            <li>Is shaping or simple trimming needed?</li>
+                            <li>Should debris cleanup be included?</li>
+                        </ul>
+                        <a class="btn btn-lime" href="shrub-hedge-edge-care.html">
+                            <span>View Hedge Care Category</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="about-scenario-board__panel" data-tab-panel="sod" hidden>
+                <div class="about-scenario-board__photo">
+                    <img src="assets/images/service-5.jpg" alt="Sod or patch repair scenario">
+                </div>
+
+                <div class="about-scenario-board__copy">
+                    <div class="about-scenario-board__title-block">
+                        <span class="badge badge--light">Repair</span>
+                        <h3>Patch repair and sod conversations need area details.</h3>
+                    </div>
+
+                    <div class="about-scenario-board__text-block">
+                        <p>
+                            Sod and lawn repair requests may depend on square footage, soil preparation, watering,
+                            grass type, access, and timing.
+                        </p>
+                        <ul>
+                            <li>How large is the damaged area?</li>
+                            <li>Is preparation included?</li>
+                            <li>Who explains watering expectations?</li>
+                        </ul>
+                        <a class="btn btn-lime" href="sod-installation-lawn-repair.html">
+                            <span>View Sod Repair Category</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
         <!-- Section 7 -->
         <section class="section section-light about-choice" aria-labelledby="about-choice-title">
