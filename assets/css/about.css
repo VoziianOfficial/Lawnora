@@ -806,3 +806,29 @@
         transform: translateY(0) scale(1);
     }
 }
+
+/* About Section 3 — icons top right only */
+.about-model__panel {
+    position: relative;
+}
+
+.about-model__panel>i,
+.about-model__panel>svg {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    margin: 0;
+}
+
+.about-model__panel h3 {
+    padding-right: 70px;
+}
+
+.about-model__panel {
+    min-height: unset;
+    padding: 32px 28px 28px;
+}
+
+.about-model__panel p {
+    margin-bottom: 0;
+}
