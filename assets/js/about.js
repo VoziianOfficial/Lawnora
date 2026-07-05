@@ -117,11 +117,40 @@
         });
     }
 
+    function initChoiceSlider() {
+        const sliders = document.querySelectorAll("[data-choice-slider]");
+        if (!sliders.length) return;
+
+        sliders.forEach((slider) => {
+            const slides = Array.from(slider.querySelectorAll("[data-choice-slide]"));
+            if (!slides.length) return;
+
+            slides.forEach((slide) => {
+                const button = slide.querySelector("button");
+                if (!button) return;
+
+                button.addEventListener("click", () => {
+                    slides.forEach((item) => {
+                        const itemButton = item.querySelector("button");
+                        const isActive = item === slide;
+
+                        item.classList.toggle("is-active", isActive);
+
+                        if (itemButton) {
+                            itemButton.setAttribute("aria-expanded", isActive ? "true" : "false");
+                        }
+                    });
+                });
+            });
+        });
+    }
+
     function initAbout() {
         initAboutHeroParallax();
         initScenarioPanelAnimation();
         initMarqueeAccessibility();
         initValueCardsTilt();
+        initChoiceSlider();
         refreshIcons();
     }
 
