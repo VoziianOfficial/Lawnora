@@ -1217,3 +1217,14 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Section 8 — keep marquee inside container */
+.about-marquee .container-wide {
+    overflow: hidden;
+}
+
+.about-marquee__track {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+}
