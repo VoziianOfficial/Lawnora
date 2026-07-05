@@ -17,9 +17,9 @@ window.LAWNORA_CONFIG = {
     company: {
         name: "Lawnora",
         legalName: "Lawnora Independent Provider-Matching Platform",
-        companyId: "Independent provider-matching platform",
+        companyId: "Independent provider-matching",
         address: "Service area varies by location",
-        serviceArea: "Participating local lawn care markets",
+        serviceArea: "Participating local lawn care",
         mapQuery: "Lawnora lawn care provider matching"
     },
 

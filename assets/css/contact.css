@@ -1186,3 +1186,326 @@
         font-size: clamp(2.1rem, 11vw, 3.2rem);
     }
 }
+
+/* ==============================
+   FINAL — Contact Direct Flow
+   low contact strips + statement + round photo services
+============================== */
+
+.contact-direct-flow {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* верхние низкие карточки */
+.contact-direct-flow .contact-direct__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: clamp(32px, 4vw, 48px);
+}
+
+.contact-direct-flow .contact-direct__card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 13px;
+    align-items: center;
+    min-height: 2px;
+    padding: 16px 18px;
+    overflow: hidden;
+    border: 1px solid rgba(247, 244, 239, 0.13);
+    border-radius: 24px;
+    background: rgba(247, 244, 239, 0.065);
+    color: var(--color-soft-white);
+    box-shadow: none;
+    transition:
+        transform var(--transition-slow),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.contact-direct-flow .contact-direct__card::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: var(--color-lime);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-slow);
+}
+
+.contact-direct-flow .contact-direct__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(155, 203, 67, 0.42);
+    background: rgba(247, 244, 239, 0.095);
+}
+
+.contact-direct-flow .contact-direct__card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-direct-flow .contact-direct__card>i,
+.contact-direct-flow .contact-direct__card>svg {
+    position: static;
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    color: #fff;
+    stroke-width: 1.45;
+    opacity: 0.95;
+    flex: 0 0 auto;
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.contact-direct-flow .contact-direct__card:hover>i,
+.contact-direct-flow .contact-direct__card:hover>svg {
+    color: var(--color-lime);
+    transform: rotate(-8deg) scale(1.06);
+}
+
+.contact-direct-flow .contact-direct__card div {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.contact-direct-flow .contact-direct__card span {
+    display: block;
+    margin: 0;
+    color: var(--color-lime);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.contact-direct-flow .contact-direct__card:nth-child(2) span {
+    color: var(--color-lime-2);
+}
+
+.contact-direct-flow .contact-direct__card:nth-child(3) span {
+    color: #f2e7b8;
+}
+
+.contact-direct-flow .contact-direct__card:nth-child(4) span {
+    color: #d5efb1;
+}
+
+.contact-direct-flow .contact-direct__card strong {
+    display: block;
+    color: var(--color-soft-white);
+    font-size: 0.92rem;
+    font-weight: 800;
+    line-height: 1.28;
+    word-break: break-word;
+}
+
+/* красивый текст без карточки */
+.contact-direct__statement {
+    width: min(100%, 1180px);
+    margin: clamp(38px, 5vw, 66px) auto clamp(34px, 4.5vw, 54px);
+    padding-block: clamp(12px, 2vw, 20px);
+    border-top: 1px solid rgba(247, 244, 239, 0.14);
+    border-bottom: 1px solid rgba(247, 244, 239, 0.14);
+    text-align: center;
+}
+
+.contact-direct__statement p {
+    max-width: 1120px;
+    margin: 0 auto;
+    color: var(--color-soft-white);
+    font-family: var(--font-heading);
+    font-size: clamp(2.05rem, 4vw, 4.8rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+}
+
+/* круглые сервисы */
+.contact-direct__services {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 2vw, 24px);
+    align-items: center;
+}
+
+.contact-direct__service {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid rgba(247, 244, 239, 0.16);
+    border-radius: 50%;
+    background: var(--color-dark-brown);
+    color: var(--color-soft-white);
+    box-shadow: 0 24px 76px rgba(0, 0, 0, 0.2);
+    transition:
+        transform var(--transition-slow),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.contact-direct__service img {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.04);
+    transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-direct__service-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: rgba(0, 0, 0, 0.42);
+    transition: background var(--transition-slow);
+}
+
+.contact-direct__service div {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: clamp(22px, 3vw, 36px);
+    text-align: center;
+    transform: translateY(28px);
+    transition: transform var(--transition-slow);
+}
+
+.contact-direct__service i,
+.contact-direct__service svg {
+    width: clamp(44px, 5vw, 72px);
+    height: clamp(44px, 5vw, 72px);
+    color: #fff;
+    stroke-width: 1.35;
+    transition:
+        transform var(--transition-slow),
+        color var(--transition);
+}
+
+.contact-direct__service h3 {
+    margin: 0;
+    color: var(--color-soft-white);
+    font-size: clamp(1.4rem, 2.2vw, 2.55rem);
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+}
+
+.contact-direct__service p {
+    max-width: 230px;
+    margin: 0;
+    color: rgba(247, 244, 239, 0.84);
+    font-size: 0.88rem;
+    line-height: 1.48;
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.contact-direct__service:hover {
+    transform: translateY(-8px);
+    border-color: rgba(155, 203, 67, 0.5);
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
+}
+
+.contact-direct__service:hover img {
+    transform: scale(1.12);
+}
+
+.contact-direct__service:hover .contact-direct__service-shade {
+    background: rgba(0, 0, 0, 0.66);
+}
+
+.contact-direct__service:hover div {
+    transform: translateY(0);
+}
+
+.contact-direct__service:hover i,
+.contact-direct__service:hover svg {
+    color: var(--color-lime);
+    transform: rotate(-8deg) scale(1.06);
+}
+
+.contact-direct__service:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1180px) {
+    .contact-direct-flow .contact-direct__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-direct__services {
+        grid-template-columns: repeat(2, minmax(220px, 320px));
+        justify-content: center;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-direct-flow .contact-direct__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-direct-flow .contact-direct__card {
+        min-height: 82px;
+        padding: 14px 16px;
+        border-radius: 20px;
+    }
+
+    .contact-direct__statement p {
+        font-size: clamp(1.75rem, 9vw, 3rem);
+    }
+
+    .contact-direct__services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .contact-direct__service div {
+        transform: translateY(0);
+        padding: 18px;
+    }
+
+    .contact-direct__service p {
+        display: none;
+    }
+
+    .contact-direct__service i,
+    .contact-direct__service svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .contact-direct__service h3 {
+        font-size: clamp(1.15rem, 6vw, 1.75rem);
+    }
+}
+
+@media (max-width: 440px) {
+    .contact-direct__services {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-direct__service {
+        width: min(100%, 280px);
+        margin-inline: auto;
+    }
+}
