@@ -262,6 +262,222 @@
         });
     }
 
+    function applyGlobalBusinessConfig() {
+        const cfg = window.LAWNORA_CONFIG || {};
+
+        const brandName = getConfigValue("brand.name", "Lawnora");
+        const tagline = getConfigValue("brand.tagline", "Independent Lawn Care Matching Platform");
+
+        const companyName = getConfigValue("company.name", brandName);
+        const legalName = getConfigValue("company.legalName", `${brandName} Independent Provider-Matching Platform`);
+        const companyId = getConfigValue("company.companyId", "Independent provider-matching");
+        const address = getConfigValue("company.address", "Service area varies by location");
+        const serviceArea = getConfigValue("company.serviceArea", "Participating local lawn care");
+        const mapQuery = getConfigValue("company.mapQuery", `${brandName} lawn care provider matching`);
+
+        const phoneRaw = getConfigValue("contact.phoneRaw", "+18005550198");
+        const phoneDisplay = getConfigValue("contact.phoneDisplay", "+1 (800) 555-0198");
+        const phoneButtonText = getConfigValue("contact.phoneButtonText", `Call ${brandName}`);
+        const email = getConfigValue("contact.email", "support@lawnora.com");
+        const emailSubject = getConfigValue("contact.emailSubject", `${brandName} lawn care request`);
+
+        const footerDescription = getConfigValue("footer.description", "");
+        const copyright = getConfigValue("footer.copyright", "");
+        const shortDisclaimer = getConfigValue("legal.shortDisclaimer", "");
+        const fullDisclaimer = getConfigValue("legal.fullDisclaimer", "");
+
+        const replacementPairs = [
+            /* brand */
+            ["Lawnora", brandName],
+            ["LAWNORA", brandName.toUpperCase()],
+            ["Lawnora Independent Provider-Matching Platform", legalName],
+            ["Lawnora independent provider-matching platform", `${brandName} independent provider-matching platform`],
+            ["Lawnora’s", `${brandName}’s`],
+            ["Lawnora's", `${brandName}'s`],
+
+            /* contact */
+            ["+1 (800) 555-0198", phoneDisplay],
+            ["+18005550198", phoneRaw],
+            ["support@lawnora.com", email],
+
+            /* company */
+            ["Independent provider-matching platform", companyId],
+            ["Independent provider-matching", companyId],
+            ["Service area varies by location", address],
+            ["Participating local lawn care markets", serviceArea],
+            ["Participating local lawn care", serviceArea],
+
+            /* footer/legal */
+            [
+                "Lawnora helps homeowners organize lawn care request details, review service categories, and compare available local provider options before deciding whether to continue.",
+                footerDescription
+            ],
+            [
+                "Lawnora is an independent provider-matching platform. Providers are independent, and final pricing, scheduling, availability, service terms, warranties, and work details are provided by participating providers.",
+                shortDisclaimer
+            ],
+            ["© 2026 Lawnora. All rights reserved.", copyright]
+        ].filter((pair) => pair[1] !== undefined && pair[1] !== null && String(pair[1]).trim() !== "");
+
+        function replaceValue(value) {
+            if (typeof value !== "string" || !value) return value;
+
+            let nextValue = value;
+
+            replacementPairs.forEach(([from, to]) => {
+                if (!from || from === to) return;
+                nextValue = nextValue.split(from).join(to);
+            });
+
+            return nextValue;
+        }
+
+        function shouldSkipNode(node) {
+            const parent = node.parentElement;
+            if (!parent) return true;
+
+            return Boolean(
+                parent.closest("script, style, noscript, template, svg")
+            );
+        }
+
+        function replaceTextNodes(root = document.body) {
+            if (!root) return;
+
+            const walker = document.createTreeWalker(
+                root,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode(node) {
+                        if (!node.nodeValue || !node.nodeValue.trim()) {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+
+                        if (shouldSkipNode(node)) {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                }
+            );
+
+            const nodes = [];
+
+            while (walker.nextNode()) {
+                nodes.push(walker.currentNode);
+            }
+
+            nodes.forEach((node) => {
+                node.nodeValue = replaceValue(node.nodeValue);
+            });
+        }
+
+        function replaceCommonAttributes() {
+            const attrs = [
+                "title",
+                "alt",
+                "aria-label",
+                "placeholder",
+                "value",
+                "content",
+                "data-form-brand",
+                "data-form-recipient"
+            ];
+
+            document.querySelectorAll("*").forEach((el) => {
+                if (el.closest("script, style, noscript, template")) return;
+
+                attrs.forEach((attr) => {
+                    if (!el.hasAttribute(attr)) return;
+                    el.setAttribute(attr, replaceValue(el.getAttribute(attr)));
+                });
+            });
+
+            document.title = replaceValue(document.title);
+
+            document.querySelectorAll("meta[content]").forEach((meta) => {
+                meta.setAttribute("content", replaceValue(meta.getAttribute("content")));
+            });
+        }
+
+        function updateContactLinksEverywhere() {
+            const encodedSubject = encodeURIComponent(emailSubject);
+            const encodedMapQuery = encodeURIComponent(mapQuery || address || serviceArea);
+
+            document.querySelectorAll("a[href^='tel:'], [data-phone-link]").forEach((link) => {
+                link.setAttribute("href", `tel:${phoneRaw}`);
+                link.setAttribute("aria-label", phoneButtonText || `Call ${phoneDisplay}`);
+            });
+
+            document.querySelectorAll("a[href^='mailto:'], [data-email-link]").forEach((link) => {
+                link.setAttribute("href", `mailto:${email}?subject=${encodedSubject}`);
+                link.setAttribute("aria-label", `Email ${email}`);
+            });
+
+            document.querySelectorAll("[data-address-link]").forEach((link) => {
+                link.setAttribute("href", `https://www.google.com/maps/search/?api=1&query=${encodedMapQuery}`);
+                link.setAttribute("target", "_blank");
+                link.setAttribute("rel", "noopener noreferrer");
+                link.setAttribute("aria-label", address || serviceArea);
+            });
+        }
+
+        function updateFormsEverywhere() {
+            document.querySelectorAll("[data-form-recipient], input[name='recipient']").forEach((input) => {
+                input.value = getConfigValue("form.recipientEmail", email);
+            });
+
+            document.querySelectorAll("[data-form-brand], input[name='brand']").forEach((input) => {
+                input.value = brandName;
+            });
+
+            document.querySelectorAll("form[action]").forEach((form) => {
+                const endpoint = getConfigValue("form.endpoint", "");
+                const method = getConfigValue("form.method", "");
+
+                if (endpoint) form.setAttribute("action", endpoint);
+                if (method) form.setAttribute("method", method);
+            });
+        }
+
+        function updateLogoEverywhere() {
+            const logoPath = getConfigValue("brand.logo", "assets/images/logo.svg");
+            const homeUrl = getConfigValue("brand.homeUrl", "index.html");
+
+            document.querySelectorAll("[data-logo-src], .site-logo__mark").forEach((img) => {
+                if (img.tagName.toLowerCase() === "img") {
+                    img.setAttribute("src", logoPath);
+                    img.setAttribute("alt", `${brandName} logo mark`);
+                }
+            });
+
+            document.querySelectorAll(".site-logo").forEach((link) => {
+                if (link.tagName.toLowerCase() === "a") {
+                    link.setAttribute("href", homeUrl);
+                    link.setAttribute("aria-label", `${brandName} home`);
+                }
+            });
+        }
+
+        function updateFooterFallbacks() {
+            document.querySelectorAll(".footer-legal-note").forEach((el) => {
+                el.innerHTML = replaceValue(el.innerHTML);
+            });
+
+            document.querySelectorAll(".site-footer").forEach((footer) => {
+                footer.innerHTML = replaceValue(footer.innerHTML);
+            });
+        }
+
+        replaceTextNodes();
+        replaceCommonAttributes();
+        updateContactLinksEverywhere();
+        updateFormsEverywhere();
+        updateLogoEverywhere();
+        updateFooterFallbacks();
+    }
+
     function injectGlobalContent() {
         injectConfigText();
         injectConfigAttributes();
@@ -269,6 +485,10 @@
         injectLogoImages();
         injectServices();
         fillFormHiddenFields();
+
+        /* главное — заменяет имя/почту/номер/адрес даже там, где нет data-config */
+        applyGlobalBusinessConfig();
+
         refreshIcons();
     }
 
@@ -777,6 +997,7 @@
         getServiceById,
         getServiceByUrl,
         injectGlobalContent,
+        applyGlobalBusinessConfig,
         initAccordions,
         initBasicTabs,
         createFAQSchema,
