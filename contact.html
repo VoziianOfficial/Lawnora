@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Contact Lawnora | Start a Lawn Care Provider-Matching Request</title>
+    <meta name="description"
+        content="Start a Lawnora lawn care request. Submit project details to compare available local provider options for mowing, fertilization, aeration, cleanup, sod repair, or hedge care.">
+    <meta name="keywords"
+        content="contact Lawnora, lawn care request, compare lawn care providers, lawn care matching form">
+    <meta name="theme-color" content="#2F241D">
+
+    <link rel="canonical" href="contact.html">
+
+    <meta property="og:title" content="Contact Lawnora | Start a Lawn Care Request">
+    <meta property="og:description"
+        content="Submit lawn care project details and compare available local provider options through Lawnora.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hero-contact.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,700..900,80..100,1&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" aria-label="Primary site header">
+        <div class="header-shell">
+            <a class="site-logo" href="index.html" aria-label="Lawnora home">
+                <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark" data-logo-src>
+                <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item nav-item--services">
+                        <a class="nav-link" href="all-services.html" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="services-dropdown" data-services-dropdown>
+                            <div class="services-dropdown__grid" data-services-dropdown-grid></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-icon-btn header-icon-btn--phone" href="tel:+18005550198" data-phone-link
+                    aria-label="Call Lawnora">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+                <a class="header-icon-btn header-icon-btn--email" href="mailto:support@lawnora.com" data-email-link
+                    aria-label="Email Lawnora">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+                <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobile-menu" data-mobile-open>
+                    <span class="mobile-toggle__lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__top">
+            <a class="site-logo" href="index.html" aria-label="Lawnora home" data-mobile-dismiss>
+                <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark" data-logo-src>
+                <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+            </a>
+
+            <button class="mobile-menu__close" type="button" aria-label="Close menu" data-mobile-close>
+                <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu__body">
+            <nav aria-label="Mobile navigation">
+                <div class="mobile-menu__nav">
+                    <a class="mobile-menu__link" href="index.html" data-mobile-dismiss>
+                        Home
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="about.html" data-mobile-dismiss>
+                        About
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="all-services.html" data-mobile-dismiss>
+                        Services
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="contact.html" data-mobile-dismiss>
+                        Contact
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <div>
+                <p class="mobile-menu__section-title">Lawn care categories</p>
+                <div class="mobile-menu__services" data-mobile-services></div>
+            </div>
+        </div>
+
+        <div class="mobile-menu__bottom">
+            <a class="mobile-menu__contact" href="tel:+18005550198" data-phone-link>
+                <i data-lucide="phone" aria-hidden="true"></i>
+                <span data-config="contact.phoneDisplay">+1 (800) 555-0198</span>
+            </a>
+            <a class="mobile-menu__contact" href="mailto:support@lawnora.com" data-email-link>
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <span data-config="contact.email">support@lawnora.com</span>
+            </a>
+            <a class="btn btn-lime" href="contact.html#request-form" data-mobile-dismiss>
+                <span>Start Your Request</span>
+                <i data-lucide="send" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Section 1 -->
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
+            <img src="assets/images/hero-contact.jpg"
+                alt="Premium lawn and home exterior for starting a Lawnora request" class="contact-hero__image">
+            <div class="contact-hero__overlay" aria-hidden="true"></div>
+
+            <div class="container-wide contact-hero__content">
+                <div class="contact-hero__copy" data-aos="fade-up">
+                    <p class="section-kicker section-kicker--light">Start a provider-matching request</p>
+                    <h1 class="hero-title" id="contact-hero-title">
+                        Start A Lawnora <span class="marked-word">Request</span>.
+                    </h1>
+                    <p class="lead lead--light">
+                        Submit lawn care project details so Lawnora can help you compare available local provider
+                        options. This is a provider-matching request, not a direct booking with Lawnora.
+                    </p>
+                    <div class="btn-row">
+                        <a class="btn btn-lime" href="#request-form">
+                            <span>Go To Request Form</span>
+                            <i data-lucide="arrow-down" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-transparent" href="all-services.html">
+                            <span>Review Categories</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="contact-hero__note card-shine" data-aos="fade-up" data-aos-delay="160">
+                    <i data-lucide="file-check-2" aria-hidden="true"></i>
+                    <p>
+                        Submitting a request does not create a service agreement. Participating providers are
+                        independent and provide final pricing, scheduling, availability, and terms.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="section section-light contact-intent" aria-labelledby="contact-intent-title">
+            <div class="container-wide">
+                <div class="section-heading--split">
+                    <div data-aos="fade-up">
+                        <p class="section-kicker">Contact intent strip</p>
+                        <h2 class="section-title" id="contact-intent-title">
+                            What Would You Like To Do First?
+                        </h2>
+                    </div>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="120">
+                        These paths help organize why you are contacting Lawnora before submitting details or reviewing
+                        the available service categories.
+                    </p>
+                </div>
+
+                <div class="contact-intent__grid">
+                    <a class="contact-intent__card card-shine" href="#request-form" data-aos="fade-up">
+                        <i data-lucide="badge-check" aria-hidden="true"></i>
+                        <h3>Compare lawn care options</h3>
+                        <p>
+                            Start with your lawn condition, timing, category, and provider comparison goals.
+                        </p>
+                        <span>Open form <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+                    </a>
+
+                    <a class="contact-intent__card card-shine" href="all-services.html" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <i data-lucide="route" aria-hidden="true"></i>
+                        <h3>Ask about request categories</h3>
+                        <p>
+                            Review which category fits mowing, fertilization, cleanup, sod repair, aeration, or hedge
+                            care.
+                        </p>
+                        <span>View services <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+                    </a>
+
+                    <a class="contact-intent__card card-shine" href="#request-form" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <i data-lucide="clipboard-list" aria-hidden="true"></i>
+                        <h3>Submit project details</h3>
+                        <p>
+                            Send the information Lawnora can use to help connect you with participating providers where
+                            available.
+                        </p>
+                        <span>Submit details <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section section-lighter contact-request" id="request-form" aria-labelledby="request-form-title">
+            <div class="container-wide contact-request__layout">
+                <aside class="contact-request__info" data-aos="fade-right">
+                    <p class="section-kicker section-kicker--light">Main request form</p>
+                    <h2 class="section-title" id="request-form-title">
+                        Share Lawn Care Details Once.
+                    </h2>
+                    <p>
+                        Lawnora helps homeowners organize lawn care requests and compare available local provider
+                        options. Lawnora does not perform the lawn care service directly.
+                    </p>
+
+                    <div class="contact-request__steps">
+                        <article>
+                            <i data-lucide="clipboard-list" aria-hidden="true"></i>
+                            <div>
+                                <h3>Tell us the category</h3>
+                                <p>Choose the closest lawn care path and describe what you want to compare.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i data-lucide="route" aria-hidden="true"></i>
+                            <div>
+                                <h3>Request is reviewed</h3>
+                                <p>Your information may be reviewed for matching with participating providers.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                            <div>
+                                <h3>Providers may follow up</h3>
+                                <p>Independent providers may contact you with questions, availability, pricing, or
+                                    terms.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="contact-request__links">
+                        <a href="tel:+18005550198" data-phone-link>
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                            <span data-config="contact.phoneDisplay">+1 (800) 555-0198</span>
+                        </a>
+                        <a href="mailto:support@lawnora.com" data-email-link>
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                            <span data-config="contact.email">support@lawnora.com</span>
+                        </a>
+                        <a href="#" data-address-link>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            <span data-config="company.serviceArea">Participating local lawn care markets</span>
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="contact-request__form-card" data-aos="fade-left">
+                    <form class="contact-form" action="contact.php" method="POST" novalidate data-contact-form>
+                        <input type="hidden" name="sourcePage" value="Contact page" data-form-source>
+                        <input type="hidden" name="recipient" value="support@lawnora.com" data-form-recipient>
+                        <input type="hidden" name="brand" value="Lawnora" data-form-brand>
+                        <input type="hidden" name="formStartedAt" value="" data-form-started-at>
+
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label class="form-label" for="fullName">Full name *</label>
+                                <input class="form-input" type="text" id="fullName" name="fullName" autocomplete="name"
+                                    placeholder="Your name" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-label" for="email">Email *</label>
+                                <input class="form-input" type="email" id="email" name="email" autocomplete="email"
+                                    placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-label" for="phone">Phone *</label>
+                                <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel"
+                                    placeholder="+1 (___) ___-____" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-label" for="service">Service category *</label>
+                                <select class="form-select" id="service" name="service" required data-service-select>
+                                    <option value="">Select a lawn care category</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <label class="form-label" for="message">Project details *</label>
+                                <textarea class="form-textarea" id="message" name="message"
+                                    placeholder="Tell us about your lawn care request, timing, lawn condition, access notes, and what you want to compare."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <label class="checkbox-field" for="privacyConsent">
+                                    <input type="checkbox" id="privacyConsent" name="privacyConsent" value="yes"
+                                        required>
+                                    <span class="checkbox-field__box" aria-hidden="true"></span>
+                                    <span>
+                                        I agree that Lawnora may process my request information and may share details
+                                        with participating providers where available. I have reviewed the
+                                        <a href="privacy-policy.html">Privacy Policy</a> and
+                                        <a href="terms-of-service.html">Terms of Service</a>. *
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <div class="form-disclaimer">
+                                    Lawnora is an independent provider-matching platform. Submitting this form does not
+                                    book lawn care service and does not create a service agreement with Lawnora. Final
+                                    pricing, scheduling, availability, service scope, warranties, and terms are provided
+                                    by participating providers.
+                                </div>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <button class="btn btn-primary contact-form__submit" type="submit">
+                                    <span>Submit Project Details</span>
+                                    <i data-lucide="send" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="section section-green contact-after" aria-labelledby="contact-after-title">
+            <div class="container-wide">
+                <div class="section-heading--split">
+                    <div data-aos="fade-up">
+                        <p class="section-kicker section-kicker--light">After submission</p>
+                        <h2 class="section-title" id="contact-after-title">
+                            What May Happen After You Submit.
+                        </h2>
+                    </div>
+                    <p class="lead lead--light" data-aos="fade-up" data-aos-delay="120">
+                        Lawnora helps start a matching process. It does not create a direct booking or service
+                        agreement.
+                    </p>
+                </div>
+
+                <div class="contact-after__timeline">
+                    <article class="contact-after__item card-shine" data-aos="fade-up">
+                        <i data-lucide="inbox" aria-hidden="true"></i>
+                        <span>Received</span>
+                        <h3>Your request is received</h3>
+                        <p>Lawnora receives the information you submitted through the contact/request form.</p>
+                    </article>
+
+                    <article class="contact-after__item card-shine" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                        <span>Reviewed</span>
+                        <h3>Details may be reviewed</h3>
+                        <p>The category, timing, scope, lawn condition, and contact information may be reviewed.</p>
+                    </article>
+
+                    <article class="contact-after__item card-shine" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="share-2" aria-hidden="true"></i>
+                        <span>Shared</span>
+                        <h3>Information may be shared</h3>
+                        <p>Where available, request details may be shared with participating independent providers.</p>
+                    </article>
+
+                    <article class="contact-after__item card-shine" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="phone-call" aria-hidden="true"></i>
+                        <span>Provider follow-up</span>
+                        <h3>Providers may contact you</h3>
+                        <p>Providers may follow up with questions, availability, pricing, scheduling, and terms.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="section section-light contact-faq" aria-labelledby="contact-faq-title">
+            <div class="container-wide contact-faq__layout">
+                <div class="contact-faq__intro" data-aos="fade-right">
+                    <p class="section-kicker">Contact FAQ</p>
+                    <h2 class="section-title" id="contact-faq-title">
+                        Before You Submit The Form.
+                    </h2>
+                    <p class="lead">
+                        These answers explain what a Lawnora request means and what happens after the form is submitted.
+                    </p>
+                </div>
+
+                <div class="accordion contact-faq__accordion" data-accordion data-faq-schema data-aos="fade-left">
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger aria-expanded="true">
+                            <span>Does submitting the form book a lawn care service?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel is-open" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    No. Submitting the form starts a provider-matching request. It does not book
+                                    service,
+                                    create a contract, or schedule Lawnora to perform lawn care.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Who may contact me?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Lawnora or participating independent providers may contact you about your request,
+                                    depending on availability, location, and service category.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Can I ask about more than one service?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Yes. You can explain multiple needs in the message field, such as mowing plus
+                                    cleanup
+                                    or fertilization plus lawn repair.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Can I choose not to continue?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Yes. You decide whether to continue after reviewing provider follow-up,
+                                    availability,
+                                    pricing, scheduling, and terms.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Who provides pricing and scheduling?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Participating providers provide final pricing, scheduling, service scope,
+                                    warranties,
+                                    and terms. Lawnora does not guarantee those details.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="section section-dark contact-direct" aria-labelledby="contact-direct-title">
+            <div class="container-wide">
+                <div class="section-heading--split">
+                    <div data-aos="fade-up">
+                        <p class="section-kicker section-kicker--light">Direct contact cards</p>
+                        <h2 class="section-title" id="contact-direct-title">
+                            Lawnora Contact And Platform Details.
+                        </h2>
+                    </div>
+                    <p class="lead lead--light" data-aos="fade-up" data-aos-delay="120">
+                        Use these details for platform communication. Lawnora is not a lawn care contractor and does not
+                        perform the work directly.
+                    </p>
+                </div>
+
+                <div class="contact-direct__grid">
+                    <a class="contact-direct__card card-shine" href="tel:+18005550198" data-phone-link
+                        data-aos="fade-up">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                        <span>Phone</span>
+                        <strong data-config="contact.phoneDisplay">+1 (800) 555-0198</strong>
+                    </a>
+
+                    <a class="contact-direct__card card-shine" href="mailto:support@lawnora.com" data-email-link
+                        data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        <span>Email</span>
+                        <strong data-config="contact.email">support@lawnora.com</strong>
+                    </a>
+
+                    <a class="contact-direct__card card-shine" href="#" data-address-link data-aos="fade-up"
+                        data-aos-delay="200">
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        <span>Service area</span>
+                        <strong data-config="company.serviceArea">Participating local lawn care markets</strong>
+                    </a>
+
+                    <article class="contact-direct__card card-shine" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="file-check-2" aria-hidden="true"></i>
+                        <span>Legal / company info</span>
+                        <strong data-config="company.companyId">Independent provider-matching platform</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="section prefooter-cta" aria-labelledby="contact-cta-title">
+            <div class="container-wide">
+                <div class="prefooter-cta__card card-shine" data-aos="zoom-in">
+                    <img src="assets/images/hero-services.jpg"
+                        alt="Premium lawn background for reviewing Lawnora service categories">
+                    <div class="prefooter-cta__content">
+                        <p class="section-kicker section-kicker--light">Still comparing?</p>
+                        <h2 class="section-title" id="contact-cta-title">
+                            Still Comparing Lawn Care Categories?
+                        </h2>
+                        <p>
+                            Review Lawnora’s service categories before submitting your request, or return to the form
+                            when your project details are ready.
+                        </p>
+                        <div class="btn-row">
+                            <a class="btn btn-lime" href="all-services.html">
+                                <span>View Services</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn btn-transparent" href="#request-form">
+                                <span>Back To Request Form</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class="container-wide">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a class="site-logo" href="index.html" aria-label="Lawnora home">
+                        <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark"
+                            data-logo-src>
+                        <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+                    </a>
+                    <p data-config="footer.description">
+                        Lawnora helps homeowners organize lawn care request details, review service categories, and
+                        compare available local provider options before deciding whether to continue.
+                    </p>
+                    <div class="footer-legal-note" data-config="legal.shortDisclaimer">
+                        Lawnora is an independent provider-matching platform. Providers are independent, and final
+                        pricing, scheduling, availability, service terms, warranties, and work details are provided by
+                        participating providers.
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Navigation</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="index.html">Home</a></li>
+                        <li><a class="footer-link" href="about.html">About</a></li>
+                        <li><a class="footer-link" href="all-services.html">Services</a></li>
+                        <li><a class="footer-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Services</h2>
+                    <ul class="footer-list" data-footer-services></ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Contact</h2>
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-contact" href="tel:+18005550198" data-phone-link>
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-config="contact.phoneDisplay">+1 (800) 555-0198</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer-contact" href="mailto:support@lawnora.com" data-email-link>
+                                <i data-lucide="mail" aria-hidden="true"></i>
+                                <span data-config="contact.email">support@lawnora.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer-contact" href="#" data-address-link>
+                                <i data-lucide="map-pin" aria-hidden="true"></i>
+                                <span data-config="company.address">Service area varies by location</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="footer-legal-note">
+                        <strong data-config="company.legalName">Lawnora Independent Provider-Matching
+                            Platform</strong><br>
+                        <span data-config="company.companyId">Independent provider-matching platform</span><br>
+                        <span data-config="company.serviceArea">Participating local lawn care markets</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-config="footer.copyright">© 2026 Lawnora. All rights reserved.</p>
+                <div class="footer-bottom__links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" data-cookie-banner role="dialog" aria-live="polite" aria-hidden="true"
+        aria-label="Cookie consent">
+        <p class="cookie-banner__text">
+            Lawnora uses essential localStorage/cookie-style preferences to remember your consent choice and improve
+            basic site functionality. Review our
+            <a href="privacy-policy.html">Privacy Policy</a>,
+            <a href="cookie-policy.html">Cookie Policy</a>, and
+            <a href="terms-of-service.html">Terms</a>.
+        </p>
+        <div class="cookie-banner__actions">
+            <button class="btn btn-lime" type="button" data-cookie-accept>Accept</button>
+            <button class="btn btn-ghost-light" type="button" data-cookie-decline>Decline</button>
+        </div>
+    </div>
+</body>
+
+</html>

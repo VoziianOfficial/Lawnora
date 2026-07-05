@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Lawn Mowing & Maintenance | Lawnora Provider-Matching Category</title>
+    <meta name="description"
+        content="Compare available local provider options for lawn mowing, trimming, edging, recurring maintenance, and general lawn upkeep through Lawnora.">
+    <meta name="keywords"
+        content="lawn mowing, lawn maintenance, grass cutting, lawn care provider matching, recurring lawn service">
+    <meta name="theme-color" content="#2F241D">
+
+    <link rel="canonical" href="lawn-mowing-maintenance.html">
+
+    <meta property="og:title" content="Lawn Mowing & Maintenance | Lawnora">
+    <meta property="og:description"
+        content="Submit lawn mowing and maintenance details to compare available local provider options.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/service-1.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,700..900,80..100,1&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/services.js" defer></script>
+</head>
+
+<body data-service-id="mowing">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" aria-label="Primary site header">
+        <div class="header-shell">
+            <a class="site-logo" href="index.html" aria-label="Lawnora home">
+                <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark" data-logo-src>
+                <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item nav-item--services">
+                        <a class="nav-link" href="all-services.html" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="services-dropdown" data-services-dropdown>
+                            <div class="services-dropdown__grid" data-services-dropdown-grid></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-icon-btn header-icon-btn--phone" href="tel:+18005550198" data-phone-link
+                    aria-label="Call Lawnora">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+                <a class="header-icon-btn header-icon-btn--email" href="mailto:support@lawnora.com" data-email-link
+                    aria-label="Email Lawnora">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+                <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobile-menu" data-mobile-open>
+                    <span class="mobile-toggle__lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__top">
+            <a class="site-logo" href="index.html" aria-label="Lawnora home" data-mobile-dismiss>
+                <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark" data-logo-src>
+                <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+            </a>
+
+            <button class="mobile-menu__close" type="button" aria-label="Close menu" data-mobile-close>
+                <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu__body">
+            <nav aria-label="Mobile navigation">
+                <div class="mobile-menu__nav">
+                    <a class="mobile-menu__link" href="index.html" data-mobile-dismiss>
+                        Home
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="about.html" data-mobile-dismiss>
+                        About
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="all-services.html" data-mobile-dismiss>
+                        Services
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="mobile-menu__link" href="contact.html" data-mobile-dismiss>
+                        Contact
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <div>
+                <p class="mobile-menu__section-title">Lawn care categories</p>
+                <div class="mobile-menu__services" data-mobile-services></div>
+            </div>
+        </div>
+
+        <div class="mobile-menu__bottom">
+            <a class="mobile-menu__contact" href="tel:+18005550198" data-phone-link>
+                <i data-lucide="phone" aria-hidden="true"></i>
+                <span data-config="contact.phoneDisplay">+1 (800) 555-0198</span>
+            </a>
+            <a class="mobile-menu__contact" href="mailto:support@lawnora.com" data-email-link>
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <span data-config="contact.email">support@lawnora.com</span>
+            </a>
+            <a class="btn btn-lime" href="contact.html#request-form" data-mobile-dismiss>
+                <span>Start Your Request</span>
+                <i data-lucide="send" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Section 1 -->
+        <section class="service-hero" aria-labelledby="service-hero-title">
+            <img src="assets/images/service-1.jpg" alt="Freshly maintained residential lawn with clean mowing lines"
+                class="service-hero__image" data-current-service-image>
+            <div class="service-hero__overlay" aria-hidden="true"></div>
+
+            <div class="container-wide service-hero__content">
+                <div class="service-hero__copy" data-aos="fade-up">
+                    <p class="section-kicker section-kicker--light">Lawnora service category</p>
+                    <h1 class="hero-title" id="service-hero-title">
+                        Lawn Mowing & <span class="marked-word">Maintenance</span>.
+                    </h1>
+                    <p class="lead lead--light">
+                        Compare available local provider options for recurring mowing, trimming, grass height control,
+                        edging, and general lawn upkeep. Lawnora helps organize the request but does not perform mowing
+                        directly.
+                    </p>
+
+                    <div class="service-hero__meta">
+                        <span><i data-lucide="leaf" aria-hidden="true"></i> Maintenance path</span>
+                        <span><i data-lucide="calendar-days" aria-hidden="true"></i> Recurring or one-time</span>
+                        <span><i data-lucide="clipboard-list" aria-hidden="true"></i> Scope details matter</span>
+                    </div>
+
+                    <div class="btn-row">
+                        <a class="btn btn-lime"
+                            href="contact.html?service=Lawn%20Mowing%20%26%20Maintenance#request-form"
+                            data-request-current-service>
+                            <span>Start Mowing Request</span>
+                            <i data-lucide="send" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-transparent" href="all-services.html">
+                            <span>All Services</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="service-hero__note card-shine" data-aos="fade-up" data-aos-delay="160">
+                    <i data-lucide="file-check-2" aria-hidden="true"></i>
+                    <p>
+                        Lawnora is an independent provider-matching platform. Participating providers set their own
+                        pricing, scheduling, service scope, availability, warranties, and terms.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="section section-light service-overview" aria-labelledby="service-overview-title">
+            <div class="container-wide service-overview__layout">
+                <div class="service-overview__media" data-aos="fade-right">
+                    <img src="assets/images/service-1.jpg" alt="Clean residential lawn area after mowing">
+                    <div class="service-overview__badge">
+                        <span>Mowing request clarity</span>
+                        <p>Useful when the main questions are frequency, trimming, cleanup, access, and lawn size.</p>
+                    </div>
+                </div>
+
+                <div class="service-overview__content" data-aos="fade-left">
+                    <p class="section-kicker">Service overview</p>
+                    <h2 class="section-title" id="service-overview-title">
+                        A Cleaner Way To Start A Lawn Maintenance Conversation.
+                    </h2>
+
+                    <div class="service-overview__text">
+                        <p>
+                            Lawn mowing sounds straightforward, but homeowners often need to clarify several practical
+                            details before comparing provider options. Lawn size, terrain, gates, pets, trimming,
+                            edging, cleanup, and recurring frequency can all affect the provider conversation.
+                        </p>
+                        <p>
+                            Lawnora helps organize those details into a clearer provider-matching request. After
+                            submitting your information, participating providers may discuss availability, final scope,
+                            pricing, scheduling, and terms directly with you.
+                        </p>
+                    </div>
+
+                    <div class="service-overview__mini">
+                        <article>
+                            <i data-lucide="calendar-check" aria-hidden="true"></i>
+                            <h3>Frequency</h3>
+                            <p>Weekly, biweekly, one-time, seasonal, or flexible maintenance schedules may be discussed.
+                            </p>
+                        </article>
+
+                        <article>
+                            <i data-lucide="scissors" aria-hidden="true"></i>
+                            <h3>Edges & trimming</h3>
+                            <p>Clarify whether trimming around walkways, fences, beds, and borders is included.</p>
+                        </article>
+                    </div>
+
+                    <div class="service-callout">
+                        <i data-lucide="info" aria-hidden="true"></i>
+                        <p>
+                            Lawnora does not guarantee mowing availability or pricing. Those details come directly from
+                            independent participating providers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section section-green service-board" aria-labelledby="service-board-title">
+            <div class="container-wide service-board__grid">
+                <div class="service-board__intro" data-aos="fade-right">
+                    <p class="section-kicker section-kicker--light">Mowing request board</p>
+                    <h2 class="section-title" id="service-board-title">
+                        Details That Help Shape A Better Mowing Request.
+                    </h2>
+                    <p class="lead lead--light">
+                        Use these prompts to describe what you need before comparing provider options. The more
+                        practical
+                        your request is, the easier it may be for a provider to respond clearly.
+                    </p>
+                    <a class="btn btn-lime" href="contact.html?service=Lawn%20Mowing%20%26%20Maintenance#request-form"
+                        data-request-current-service>
+                        <span>Submit Details</span>
+                        <i data-lucide="send" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="service-board__cards">
+                    <article class="service-board__card card-shine" data-aos="fade-up">
+                        <i data-lucide="ruler" aria-hidden="true"></i>
+                        <h3>Lawn size</h3>
+                        <p>Describe whether the lawn is small, medium, large, corner-lot, sloped, fenced, or split into
+                            zones.</p>
+                    </article>
+
+                    <article class="service-board__card card-shine" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="calendar-days" aria-hidden="true"></i>
+                        <h3>Visit frequency</h3>
+                        <p>Explain whether you want one-time help, recurring visits, seasonal care, or a flexible
+                            schedule.</p>
+                    </article>
+
+                    <article class="service-board__card card-shine" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="scissors" aria-hidden="true"></i>
+                        <h3>Trimming needs</h3>
+                        <p>Mention borders, fences, beds, walkways, trees, and whether edging should be discussed.</p>
+                    </article>
+
+                    <article class="service-board__card card-shine" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="gate" aria-hidden="true"></i>
+                        <h3>Access notes</h3>
+                        <p>Add gate, parking, pets, preferred hours, equipment access, or HOA timing notes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="section section-light service-process" aria-labelledby="service-process-title">
+            <div class="container-wide service-process__layout">
+                <div class="service-process__intro" data-aos="fade-right">
+                    <p class="section-kicker">Comparison process</p>
+                    <h2 class="section-title" id="service-process-title">
+                        What To Clarify Before Continuing.
+                    </h2>
+                    <p class="lead">
+                        Lawnora helps begin the request, but homeowners should confirm final details with participating
+                        providers before agreeing to any lawn care service.
+                    </p>
+                </div>
+
+                <div class="service-process__steps" data-aos="fade-left">
+                    <article class="service-process__step">
+                        <span class="service-process__number" aria-hidden="true"></span>
+                        <div>
+                            <h3>Confirm what mowing includes</h3>
+                            <p>
+                                Ask whether trimming, edging, blowing clippings, driveway cleanup, bed borders, and
+                                disposal are included or quoted separately.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-process__step">
+                        <span class="service-process__number" aria-hidden="true"></span>
+                        <div>
+                            <h3>Discuss frequency and timing</h3>
+                            <p>
+                                Confirm whether the provider supports weekly, biweekly, occasional, or seasonal
+                                scheduling and how weather delays are handled.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-process__step">
+                        <span class="service-process__number" aria-hidden="true"></span>
+                        <div>
+                            <h3>Explain lawn access</h3>
+                            <p>
+                                Mention locked gates, pets, parking, steep areas, narrow paths, equipment limitations,
+                                or any areas that should not be serviced.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-process__step">
+                        <span class="service-process__number" aria-hidden="true"></span>
+                        <div>
+                            <h3>Review provider terms</h3>
+                            <p>
+                                Confirm final pricing, cancellation rules, schedule windows, scope, recurring terms,
+                                communication method, and any provider-specific policies.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="section section-lighter service-related" aria-labelledby="service-related-title">
+            <div class="container-wide service-related__layout">
+                <div class="service-related__head" data-aos="fade-up">
+                    <div>
+                        <p class="section-kicker">Related categories</p>
+                        <h2 class="section-title" id="service-related-title">
+                            Other Lawn Care Paths To Compare.
+                        </h2>
+                    </div>
+                    <p class="lead">
+                        If your mowing request also includes treatments, cleanup, repair, or hedge detail work, review
+                        these nearby Lawnora categories.
+                    </p>
+                </div>
+
+                <div class="service-related__grid" data-related-services data-aos="fade-up"></div>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="section section-light service-faq" aria-labelledby="service-faq-title">
+            <div class="container-wide service-faq__layout">
+                <div class="service-faq__intro" data-aos="fade-right">
+                    <p class="section-kicker">Mowing FAQ</p>
+                    <h2 class="section-title" id="service-faq-title">
+                        Lawn Mowing Request Questions.
+                    </h2>
+                    <p class="lead">
+                        These answers explain how Lawnora’s mowing category works and what homeowners should confirm
+                        with providers.
+                    </p>
+                </div>
+
+                <div class="accordion service-faq__accordion" data-accordion data-faq-schema data-aos="fade-left">
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger aria-expanded="true">
+                            <span>Does Lawnora perform lawn mowing?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel is-open" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    No. Lawnora is an independent provider-matching platform. It does not mow lawns,
+                                    send crews, or perform maintenance directly.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Can I request recurring mowing?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Yes. You can describe weekly, biweekly, seasonal, flexible, or one-time mowing
+                                    needs.
+                                    Participating providers confirm what schedules they can support.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Should I mention trimming and edging?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Yes. Trimming, edging, blowing clippings, and cleanup can vary by provider, so those
+                                    details should be confirmed before continuing.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item">
+                        <button class="accordion-trigger" type="button" data-accordion-trigger>
+                            <span>Who gives the final price?</span>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="accordion-panel" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <p class="accordion-panel__content">
+                                    Participating providers provide final pricing, scheduling, service scope,
+                                    warranties,
+                                    cancellation terms, and availability.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="section prefooter-cta" aria-labelledby="service-cta-title">
+            <div class="container-wide">
+                <div class="prefooter-cta__card card-shine" data-aos="zoom-in">
+                    <img src="assets/images/hero-contact.jpg" alt="Premium lawn background for mowing request CTA">
+                    <div class="prefooter-cta__content">
+                        <p class="section-kicker section-kicker--light">Start with clear details</p>
+                        <h2 class="section-title" id="service-cta-title">
+                            Ready To Compare Lawn Mowing Provider Options?
+                        </h2>
+                        <p>
+                            Submit lawn size, frequency, trimming needs, access notes, and timing preferences. Lawnora
+                            helps route the request without acting as the direct service provider.
+                        </p>
+                        <div class="btn-row">
+                            <a class="btn btn-lime"
+                                href="contact.html?service=Lawn%20Mowing%20%26%20Maintenance#request-form"
+                                data-request-current-service>
+                                <span>Start Mowing Request</span>
+                                <i data-lucide="send" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn btn-transparent" href="all-services.html">
+                                <span>View All Categories</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class="container-wide">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a class="site-logo" href="index.html" aria-label="Lawnora home">
+                        <img src="assets/images/logo.svg" alt="Lawnora grass logo mark" class="site-logo__mark"
+                            data-logo-src>
+                        <span class="site-logo__text" data-config="brand.name">Lawnora</span>
+                    </a>
+                    <p data-config="footer.description">
+                        Lawnora helps homeowners organize lawn care request details, review service categories, and
+                        compare available local provider options before deciding whether to continue.
+                    </p>
+                    <div class="footer-legal-note" data-config="legal.shortDisclaimer">
+                        Lawnora is an independent provider-matching platform. Providers are independent, and final
+                        pricing, scheduling, availability, service terms, warranties, and work details are provided by
+                        participating providers.
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Navigation</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="index.html">Home</a></li>
+                        <li><a class="footer-link" href="about.html">About</a></li>
+                        <li><a class="footer-link" href="all-services.html">Services</a></li>
+                        <li><a class="footer-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Services</h2>
+                    <ul class="footer-list" data-footer-services></ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-title">Contact</h2>
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-contact" href="tel:+18005550198" data-phone-link>
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-config="contact.phoneDisplay">+1 (800) 555-0198</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer-contact" href="mailto:support@lawnora.com" data-email-link>
+                                <i data-lucide="mail" aria-hidden="true"></i>
+                                <span data-config="contact.email">support@lawnora.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer-contact" href="#" data-address-link>
+                                <i data-lucide="map-pin" aria-hidden="true"></i>
+                                <span data-config="company.address">Service area varies by location</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="footer-legal-note">
+                        <strong data-config="company.legalName">Lawnora Independent Provider-Matching
+                            Platform</strong><br>
+                        <span data-config="company.companyId">Independent provider-matching platform</span><br>
+                        <span data-config="company.serviceArea">Participating local lawn care markets</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-config="footer.copyright">© 2026 Lawnora. All rights reserved.</p>
+                <div class="footer-bottom__links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" data-cookie-banner role="dialog" aria-live="polite" aria-hidden="true"
+        aria-label="Cookie consent">
+        <p class="cookie-banner__text">
+            Lawnora uses essential localStorage/cookie-style preferences to remember your consent choice and improve
+            basic site functionality. Review our
+            <a href="privacy-policy.html">Privacy Policy</a>,
+            <a href="cookie-policy.html">Cookie Policy</a>, and
+            <a href="terms-of-service.html">Terms</a>.
+        </p>
+        <div class="cookie-banner__actions">
+            <button class="btn btn-lime" type="button" data-cookie-accept>Accept</button>
+            <button class="btn btn-ghost-light" type="button" data-cookie-decline>Decline</button>
+        </div>
+    </div>
+</body>
+
+</html>

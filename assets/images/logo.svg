@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Lawnora grass logo</title>
+  <desc id="logoDesc">A premium grass blade logo mark for Lawnora.</desc>
+
+  <g stroke="#2F241D" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M89 414V380C89 339 66 308 39 285C95 293 145 329 172 386V414H89Z" fill="#8FBE3B"/>
+    <path d="M151 414V345C151 274 116 225 96 199C170 217 235 281 267 386V414H151Z" fill="#A0CD67"/>
+    <path d="M203 414V318C203 213 165 118 137 58C252 119 326 244 344 414H203Z" fill="#B7E766"/>
+    <path d="M320 414V318C327 203 385 116 437 61C402 172 386 281 390 414H320Z" fill="#A6D16D"/>
+    <path d="M297 414C308 333 365 271 475 249C429 306 405 363 402 414H297Z" fill="#C8EA8C"/>
+    <path d="M89 414H402" fill="none"/>
+  </g>
+</svg>
