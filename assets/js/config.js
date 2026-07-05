@@ -57,7 +57,7 @@ window.LAWNORA_CONFIG = {
             title: "Lawn Mowing & Maintenance",
             shortTitle: "Mowing",
             url: "lawn-mowing-maintenance.html",
-            image: "assets/images/service-1.jpg",
+            image: "assets/images/card-1.jpg",
             icon: "leaf",
             description:
                 "Compare local provider options for regular lawn mowing, recurring maintenance, grass height control, trimming, and general lawn upkeep.",
@@ -71,7 +71,7 @@ window.LAWNORA_CONFIG = {
             title: "Lawn Fertilization & Weed Control",
             shortTitle: "Fertilization",
             url: "lawn-fertilization-weed-control.html",
-            image: "assets/images/service-2.jpg",
+            image: "assets/images/card-2.jpg",
             icon: "sprout",
             description:
                 "Compare provider options for fertilization, weed control programs, nutrient support, and healthier grass appearance.",
@@ -85,7 +85,7 @@ window.LAWNORA_CONFIG = {
             title: "Lawn Aeration & Overseeding",
             shortTitle: "Aeration",
             url: "lawn-aeration-overseeding.html",
-            image: "assets/images/service-3.jpg",
+            image: "assets/images/card-3.jpg",
             icon: "shovel",
             description:
                 "Compare local providers for core aeration, overseeding, lawn thickening, soil breathing support, and seasonal lawn improvement.",
@@ -99,7 +99,7 @@ window.LAWNORA_CONFIG = {
             title: "Seasonal Yard Clean-Up",
             shortTitle: "Clean-Up",
             url: "seasonal-yard-cleanup.html",
-            image: "assets/images/service-4.jpg",
+            image: "assets/images/card-4.jpg",
             icon: "tree-pine",
             description:
                 "Compare provider options for spring clean-up, fall clean-up, leaf removal, debris clearing, and seasonal outdoor preparation.",
@@ -113,7 +113,7 @@ window.LAWNORA_CONFIG = {
             title: "Sod Installation & Lawn Repair",
             shortTitle: "Sod Repair",
             url: "sod-installation-lawn-repair.html",
-            image: "assets/images/service-5.jpg",
+            image: "assets/images/card-5.jpg",
             icon: "badge-check",
             description:
                 "Compare local provider options for sod installation, damaged lawn repair, bare patch improvement, and new lawn area setup.",
@@ -127,7 +127,7 @@ window.LAWNORA_CONFIG = {
             title: "Shrub, Hedge & Edge Care",
             shortTitle: "Hedge Care",
             url: "shrub-hedge-edge-care.html",
-            image: "assets/images/service-6.jpg",
+            image: "assets/images/card-6.jpg",
             icon: "scissors",
             description:
                 "Compare providers for hedge trimming, shrub shaping, lawn edging, border cleanup, and polished yard detailing.",
