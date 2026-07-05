@@ -1294,6 +1294,25 @@ h4 {
         box-shadow var(--transition);
 }
 
+.form-select {
+    padding-right: 48px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--color-dark-green) 50%),
+        linear-gradient(135deg, var(--color-dark-green) 50%, transparent 50%);
+    background-position:
+        calc(100% - 23px) calc(50% - 2px),
+        calc(100% - 17px) calc(50% - 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.form-select::-ms-expand {
+    display: none;
+}
+
 .form-textarea {
     min-height: 132px;
     resize: vertical;
@@ -1346,14 +1365,14 @@ h4 {
 .checkbox-field__box::after {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 3px;
+    left: 50%;
+    top: 50%;
     width: 6px;
     height: 12px;
     border: solid var(--color-dark-brown);
     border-width: 0 2px 2px 0;
     opacity: 0;
-    transform: rotate(45deg) scale(0.8);
+    transform: translate(-50%, -58%) rotate(45deg) scale(0.8);
     transition: opacity var(--transition), transform var(--transition);
 }
 
@@ -1364,7 +1383,7 @@ h4 {
 
 .checkbox-field input:checked+.checkbox-field__box::after {
     opacity: 1;
-    transform: rotate(45deg) scale(1);
+    transform: translate(-50%, -58%) rotate(45deg) scale(1);
 }
 
 .checkbox-field input:focus-visible+.checkbox-field__box {
