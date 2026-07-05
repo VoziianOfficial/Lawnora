@@ -182,6 +182,58 @@
         });
     }
 
+    function initQuestionSlider() {
+        const sliders = document.querySelectorAll("[data-question-slider]");
+        if (!sliders.length) return;
+
+        sliders.forEach((slider) => {
+            if (slider.dataset.questionSliderReady === "true") return;
+            slider.dataset.questionSliderReady = "true";
+
+            const slides = Array.from(slider.querySelectorAll("[data-question-slide]"));
+            if (!slides.length) return;
+
+            let isAnimating = false;
+
+            function setActiveSlide(activeSlide) {
+                slides.forEach((item) => {
+                    const itemButton = item.querySelector("button");
+                    const isActive = item === activeSlide;
+
+                    item.classList.toggle("is-active", isActive);
+
+                    if (itemButton) {
+                        itemButton.setAttribute("aria-expanded", isActive ? "true" : "false");
+                    }
+                });
+            }
+
+            slides.forEach((slide) => {
+                const button = slide.querySelector("button");
+                if (!button) return;
+
+                button.addEventListener("click", () => {
+                    if (slide.classList.contains("is-active") || isAnimating) return;
+
+                    isAnimating = true;
+                    slider.classList.add("is-switching");
+
+                    window.requestAnimationFrame(() => {
+                        setActiveSlide(slide);
+                    });
+
+                    window.setTimeout(() => {
+                        isAnimating = false;
+                        slider.classList.remove("is-switching");
+                    }, 1120);
+
+                    refreshIcons();
+                });
+            });
+        });
+    }
+
+
     function initAllServices() {
         initServicesHeroParallax();
         initServicePreviewSwiper();
@@ -189,6 +241,7 @@
         initMatrixMobileLabels();
         initNavigatorDrag();
         initCardMouseGlow();
+        initQuestionSlider();
         refreshIcons();
     }
 
