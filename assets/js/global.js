@@ -406,6 +406,8 @@
         const closeButtons = document.querySelectorAll(SELECTORS.mobileClose);
         if (!menu || !openButtons.length) return;
 
+        const isMenuOpen = () => menu.classList.contains("is-open");
+
         const openMenu = (button) => {
             state.lastFocusedElement = button || document.activeElement;
             menu.classList.add("is-open");
@@ -431,7 +433,14 @@
         };
 
         openButtons.forEach((button) => {
-            button.addEventListener("click", () => openMenu(button));
+            button.addEventListener("click", () => {
+                if (isMenuOpen()) {
+                    closeMenu();
+                    return;
+                }
+
+                openMenu(button);
+            });
         });
 
         closeButtons.forEach((button) => {

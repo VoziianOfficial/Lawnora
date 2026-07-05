@@ -684,6 +684,11 @@
 
     .service-process__step {
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .service-process__number {
+        display: none;
     }
 
     .service-related__grid {
