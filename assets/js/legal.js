@@ -206,7 +206,39 @@
         });
     }
 
+    function fixLegalTocSticky() {
+        const toc = document.querySelector(".legal-toc");
+        if (!toc) return;
+
+        toc.removeAttribute("data-aos");
+        toc.removeAttribute("data-aos-delay");
+        toc.classList.remove("aos-init", "aos-animate");
+
+        const parents = [
+            document.documentElement,
+            document.body,
+            document.querySelector("main"),
+            document.querySelector(".legal-content"),
+            document.querySelector(".legal-content .container-wide"),
+            document.querySelector(".legal-layout")
+        ].filter(Boolean);
+
+        parents.forEach((parent) => {
+            parent.style.overflow = "visible";
+            parent.style.overflowX = "visible";
+            parent.style.overflowY = "visible";
+            parent.style.transform = "none";
+        });
+
+        toc.style.position = "sticky";
+        toc.style.top = "calc(var(--header-height) + 28px)";
+        toc.style.alignSelf = "start";
+        toc.style.height = "max-content";
+        toc.style.transform = "none";
+    }
+
     function initLegalPage() {
+        fixLegalTocSticky();
         initLegalHeroParallax();
         initLegalTocActiveState();
         initLegalSmoothToc();

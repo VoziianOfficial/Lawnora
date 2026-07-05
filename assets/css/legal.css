@@ -883,3 +883,58 @@
         gap: 12px;
     }
 }
+
+/* ==============================
+   HARD FIX — Legal TOC sticky
+============================== */
+
+html,
+body,
+main,
+.legal-content,
+.legal-content.section,
+.legal-content .container-wide,
+.legal-layout {
+    overflow: visible !important;
+    transform: none !important;
+}
+
+.legal-layout {
+    align-items: start !important;
+}
+
+.legal-toc {
+    position: sticky !important;
+    top: calc(var(--header-height) + 28px) !important;
+    align-self: start !important;
+    height: max-content !important;
+    max-height: calc(100vh - var(--header-height) - 56px);
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    transform: none !important;
+    will-change: auto !important;
+}
+
+.legal-toc.aos-init,
+.legal-toc.aos-animate,
+.legal-toc[data-aos] {
+    transform: none !important;
+}
+
+/* sticky пусть работает на desktop/tablet */
+@media (min-width: 761px) {
+    .legal-toc {
+        position: sticky !important;
+        top: calc(var(--header-height) + 28px) !important;
+    }
+}
+
+/* на маленьком mobile лучше обычный блок */
+@media (max-width: 760px) {
+    .legal-toc {
+        position: relative !important;
+        top: auto !important;
+        max-height: none;
+        overflow: visible !important;
+    }
+}
