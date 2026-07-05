@@ -729,78 +729,83 @@
             </div>
         </section>
 
-        <!-- Section 7 -->
-        <section class="section section-lighter services-matrix" aria-labelledby="services-matrix-title">
-            <div class="container-wide">
-                <div class="section-heading--center" data-aos="fade-up">
-                    <p class="section-kicker">Compare scope matrix</p>
-                    <h2 class="section-title" id="services-matrix-title">
-                        See What Each Category Helps Organize.
-                    </h2>
-                    <p class="lead">
-                        This is not a pricing table. It is a practical request-clarity matrix to help homeowners compare
-                        what providers may need to confirm.
-                    </p>
-                </div>
-
-                <div class="services-matrix__rows" data-aos="fade-up">
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="leaf" aria-hidden="true"></i>
-                            Lawn Mowing & Maintenance
-                        </span>
-                        <span>Grass height, trimming, lawn access, recurring frequency, and cleanup expectations.</span>
-                        <span>Visit timing, included tasks, service frequency, access needs, and provider terms.</span>
-                    </article>
-
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="sprout" aria-hidden="true"></i>
-                            Fertilization & Weed Control
-                        </span>
-                        <span>Weeds, lawn appearance, treatment goals, pets, timing, and product questions.</span>
-                        <span>Product details, safety notes, schedule, follow-up expectations, and terms.</span>
-                    </article>
-
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="shovel" aria-hidden="true"></i>
-                            Aeration & Overseeding
-                        </span>
-                        <span>Compacted soil, thin grass, seasonal timing, lawn area, and watering expectations.</span>
-                        <span>Aeration method, seed approach, preparation, timing, and aftercare guidance.</span>
-                    </article>
-
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="tree-pine" aria-hidden="true"></i>
-                            Seasonal Yard Clean-Up
-                        </span>
-                        <span>Leaves, debris, branches, beds, outdoor preparation, and hauling expectations.</span>
-                        <span>Included cleanup tasks, disposal or hauling, access, timing, and provider terms.</span>
-                    </article>
-
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="badge-check" aria-hidden="true"></i>
-                            Sod Installation & Lawn Repair
-                        </span>
-                        <span>Bare patches, damaged grass, new lawn areas, soil prep, and watering needs.</span>
-                        <span>Area size, material details, prep scope, installation timing, and aftercare.</span>
-                    </article>
-
-                    <article class="services-matrix__row">
-                        <span class="services-matrix__category">
-                            <i data-lucide="scissors" aria-hidden="true"></i>
-                            Shrub, Hedge & Edge Care
-                        </span>
-                        <span>Hedge shape, shrub height, edging lines, borders, cleanup, and recurring detail
-                            work.</span>
-                        <span>Style expectations, included areas, debris cleanup, timing, and provider terms.</span>
-                    </article>
-                </div>
+    <!-- Section 7 -->
+    <section class="section section-lighter services-matrix services-scope-cards" aria-labelledby="services-matrix-title">
+        <div class="container-wide">
+            <div class="section-heading--center" data-aos="fade-up">
+                <p class="section-kicker">Compare scope matrix</p>
+                <h2 class="section-title" id="services-matrix-title">
+                    See What Each Category Helps Organize.
+                </h2>
+                <p class="lead">
+                    This is not a pricing table. It is a practical request-clarity guide to help homeowners understand what
+                    providers may need to confirm.
+                </p>
             </div>
-        </section>
+    
+            <div class="services-scope-cards__grid" data-aos="fade-up">
+                <article class="services-scope-cards__card">
+                    <i data-lucide="leaf" aria-hidden="true"></i>
+                    <span class="services-scope-cards__tag">Maintenance</span>
+                    <h3>Mowing, trimming, and routine lawn care</h3>
+                    <p>
+                        Useful when the request is about regular upkeep, grass height, edging, access, visit frequency,
+                        and what should be included during each service visit.
+                    </p>
+                    <ul>
+                        <li>Grass height and mowing frequency</li>
+                        <li>Trimming, edging, and cleanup expectations</li>
+                        <li>Access details and recurring service terms</li>
+                    </ul>
+                </article>
+    
+                <article class="services-scope-cards__card">
+                    <i data-lucide="sprout" aria-hidden="true"></i>
+                    <span class="services-scope-cards__tag">Treatment</span>
+                    <h3>Fertilization, weeds, and lawn appearance</h3>
+                    <p>
+                        Helpful when the main concern is lawn health, weed control, product questions, seasonal timing,
+                        or improving the overall look of the grass.
+                    </p>
+                    <ul>
+                        <li>Weed concerns and treatment goals</li>
+                        <li>Product details and safety notes</li>
+                        <li>Follow-up timing and care expectations</li>
+                    </ul>
+                </article>
+    
+                <article class="services-scope-cards__card">
+                    <i data-lucide="shovel" aria-hidden="true"></i>
+                    <span class="services-scope-cards__tag">Recovery</span>
+                    <h3>Aeration, overseeding, sod, and repair</h3>
+                    <p>
+                        Best for requests involving compacted soil, thin grass, bare patches, damaged lawn areas,
+                        new sod, or seasonal recovery after stress.
+                    </p>
+                    <ul>
+                        <li>Lawn area and visible damage</li>
+                        <li>Preparation, seed, sod, or repair scope</li>
+                        <li>Watering and aftercare guidance</li>
+                    </ul>
+                </article>
+    
+                <article class="services-scope-cards__card">
+                    <i data-lucide="scissors" aria-hidden="true"></i>
+                    <span class="services-scope-cards__tag">Detail work</span>
+                    <h3>Clean-up, hedges, edges, and final details</h3>
+                    <p>
+                        Works for seasonal cleanup, leaves, debris, shrubs, hedges, borders, polished edges,
+                        hauling questions, and outdoor preparation.
+                    </p>
+                    <ul>
+                        <li>Areas included in the cleanup</li>
+                        <li>Hedge, shrub, and border expectations</li>
+                        <li>Debris removal, timing, and provider terms</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
 
         <!-- Section 8 -->
         <section class="section section-green services-note" aria-labelledby="services-note-title">
