@@ -1273,3 +1273,152 @@
     color: var(--color-soft-white);
     box-shadow: 10px 10px 0 var(--color-dark-brown);
 }
+
+
+/* ==============================
+   Home Selector Round Icon Buttons
+============================== */
+
+.home-selector__chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.home-selector__chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(62px, 5vw, 78px);
+    height: clamp(62px, 5vw, 78px);
+    min-width: clamp(62px, 5vw, 78px);
+    padding: 0;
+    border: 2px solid rgba(47, 74, 62, 0.22);
+    border-radius: 50%;
+    background: var(--color-soft-white);
+    color: var(--color-dark-green);
+    box-shadow: 6px 6px 0 rgba(47, 74, 62, 0.16);
+    overflow: visible;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.home-selector__chip::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border: 1px solid rgba(155, 203, 67, 0.42);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.82);
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.home-selector__chip::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 13px;
+    height: 13px;
+    border: 2px solid var(--color-soft-white);
+    border-radius: 50%;
+    background: var(--color-lime);
+    opacity: 0;
+    transform: scale(0.6);
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.home-selector__chip i,
+.home-selector__chip svg {
+    width: clamp(26px, 2.5vw, 36px);
+    height: clamp(26px, 2.5vw, 36px);
+    stroke-width: 1.8;
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.home-selector__chip:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-dark-green);
+    background: var(--color-lime);
+    color: var(--color-dark-brown);
+    box-shadow: 8px 8px 0 rgba(47, 74, 62, 0.28);
+}
+
+.home-selector__chip:hover i,
+.home-selector__chip:hover svg {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+.home-selector__chip.is-active,
+.home-selector__chip[aria-selected="true"] {
+    border-color: var(--color-dark-green);
+    background: var(--color-dark-green);
+    color: var(--color-lime);
+    box-shadow: 8px 8px 0 var(--color-lime);
+    
+}
+
+.home-selector__chip.is-active::before,
+.home-selector__chip[aria-selected="true"]::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.home-selector__chip.is-active::after,
+.home-selector__chip[aria-selected="true"]::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.home-selector__chip.is-active i,
+.home-selector__chip[aria-selected="true"] svg {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+@media (max-width: 760px) {
+    .home-selector__chips {
+        justify-content: center;
+        gap: 11px;
+    }
+
+    .home-selector__chip {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        box-shadow: 5px 5px 0 rgba(47, 74, 62, 0.18);
+    }
+
+    .home-selector__chip i,
+    .home-selector__chip svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.home-selector__chip.is-active i,
+.home-selector__chip.is-active svg,
+.home-selector__chip[aria-selected="true"] i,
+.home-selector__chip[aria-selected="true"] svg {
+    color: var(--color-soft-white);
+}
+
+.home-selector__chip.is-active:hover i,
+.home-selector__chip.is-active:hover svg,
+.home-selector__chip[aria-selected="true"]:hover i,
+.home-selector__chip[aria-selected="true"]:hover svg {
+    color: var(--color-soft-white);
+}
