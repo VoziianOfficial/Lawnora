@@ -573,3 +573,89 @@
         width: 100%;
     }
 }
+
+/* FIX — Contact intent cards icons on the right */
+
+.contact-intent__card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    overflow: hidden;
+}
+
+/* большая главная иконка справа */
+.contact-intent__card>i,
+.contact-intent__card>svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: clamp(44px, 4.5vw, 68px);
+    height: clamp(44px, 4.5vw, 68px);
+    color: var(--color-dark-green);
+    stroke-width: 1.45;
+    opacity: 0.95;
+    pointer-events: none;
+    transition:
+        transform var(--transition-slow),
+        color var(--transition),
+        opacity var(--transition);
+}
+
+/* текст НЕ ужимаем */
+.contact-intent__card h3,
+.contact-intent__card p {
+    max-width: none;
+    padding-right: 0;
+}
+
+/* чтобы заголовок не залезал прямо под иконку только на коротких карточках */
+.contact-intent__card h3 {
+    min-height: 1.8em;
+}
+
+.contact-intent__card p {
+    width: 100%;
+}
+
+/* нижняя ссылка остается обычной */
+.contact-intent__card span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+/* маленькая стрелка внутри span не становится большой */
+.contact-intent__card span i,
+.contact-intent__card span svg {
+    position: static;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* hover */
+.contact-intent__card:hover>i,
+.contact-intent__card:hover>svg {
+    color: var(--color-lime);
+    opacity: 1;
+    transform: rotate(-8deg) scale(1.08);
+}
+
+@media (max-width: 760px) {
+
+    .contact-intent__card>i,
+    .contact-intent__card>svg {
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .contact-intent__card h3 {
+        width: calc(100% - 56px);
+    }
+}
